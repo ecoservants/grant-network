@@ -1,0 +1,71 @@
+name: Close All OGN Roadmap Issues
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  close_roadmap_issues:
+    runs-on: ubuntu-latest
+
+    permissions:
+      issues: write
+
+    steps:
+      - name: Close all open issues with label ogn-roadmap
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          python - << 'EOF'
+          import os
+          import requests
+
+          repo = os.environ["GITHUB_REPOSITORY"]
+          token = os.environ["GITHUB_TOKEN"]
+
+          session = requests.Session()
+          session.headers.update({
+              "Authorization": f"Bearer {token}",
+              "Accept": "application/vnd.github+json"
+          })
+
+          total_closed = 0
+          page = 1
+
+          while True:
+            resp = session.get(
+                f"https://api.github.com/repos/{repo}/issues",
+                params={
+                    "state": "open",
+                    "per_page": 100,
+                    "page": page,
+                    "labels": "ogn-roadmap",
+                },
+            )
+            resp.raise_for_status()
+            issues = resp.json()
+            if not issues:
+              break
+
+            for issue in issues:
+              # Skip PRs
+              if "pull_request" in issue:
+                continue
+
+              number = issue["number"]
+              title = issue["title"]
+              print(f"Closing #{number}: {title}")
+
+              r = session.patch(
+                  f"https://api.github.com/repos/{repo}/issues/{number}",
+                  json={"state": "closed"},
+              )
+              if r.status_code >= 300:
+                  print(f"  ⚠️ Failed to close #{number}: {r.status_code} {r.text}")
+              else:
+                  total_closed += 1
+
+            page += 1
+
+          print(f"\nDone. Closed {total_closed} roadmap issues.")
+          EOF
