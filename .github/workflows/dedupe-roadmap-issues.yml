@@ -1,0 +1,112 @@
+name: Deduplicate OGN Roadmap Issues
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  dedupe_ogn_roadmap:
+    runs-on: ubuntu-latest
+
+    permissions:
+      issues: write
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Find and close duplicate roadmap issues
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          python - << 'EOF'
+          import os
+          import requests
+          from collections import defaultdict
+
+          repo = os.environ["GITHUB_REPOSITORY"]
+          token = os.environ["GITHUB_TOKEN"]
+
+          session = requests.Session()
+          session.headers.update({
+              "Authorization": f"Bearer {token}",
+              "Accept": "application/vnd.github+json"
+          })
+
+          print(f"Scanning repo {repo} for duplicate roadmap issues...")
+
+          # title -> list of (number, created_at, state)
+          issues_by_title = defaultdict(list)
+          page = 1
+
+          while True:
+            resp = session.get(
+                f"https://api.github.com/repos/{repo}/issues",
+                params={
+                    "state": "open",
+                    "per_page": 100,
+                    "page": page,
+                    "labels": "ogn-roadmap",
+                },
+            )
+            resp.raise_for_status()
+            data = resp.json()
+            if not data:
+              break
+
+            for issue in data:
+              if "pull_request" in issue:
+                continue
+              title = issue["title"]
+              number = issue["number"]
+              created_at = issue["created_at"]
+              state = issue["state"]
+              issues_by_title[title].append((number, created_at, state))
+
+            page += 1
+
+          duplicates = {
+              title: items
+              for title, items in issues_by_title.items()
+              if len(items) > 1
+          }
+
+          if not duplicates:
+            print("✅ No duplicate roadmap issues found.")
+            raise SystemExit(0)
+
+          print("❗ Found duplicate roadmap issues:")
+          total_closed = 0
+
+          for title, items in sorted(duplicates.items()):
+            # sort by created_at; keep the oldest
+            items_sorted = sorted(items, key=lambda x: x[1])
+            keeper = items_sorted[0]
+            dupes = items_sorted[1:]
+
+            print(f"- {title}")
+            print(f"  Keeping #{keeper[0]} (oldest), closing: {[n for n,_,_ in dupes]}")
+
+            for number, created_at, state in dupes:
+              # Add a comment explaining why we are closing
+              comment_url = f"https://api.github.com/repos/{repo}/issues/{number}/comments"
+              close_url   = f"https://api.github.com/repos/{repo}/issues/{number}"
+
+              comment_body = {
+                  "body": (
+                      "Closing as duplicate of an older roadmap issue with the same title. "
+                      "This issue was created during an automated import run."
+                  )
+              }
+              session.post(comment_url, json=comment_body)
+
+              close_body = {"state": "closed"}
+              r = session.patch(close_url, json=close_body)
+              if r.status_code >= 300:
+                print(f"    ⚠️ Failed to close #{number}: {r.status_code} {r.text}")
+              else:
+                print(f"    ✅ Closed duplicate #{number}")
+                total_closed += 1
+
+          print(f"\nDone. Closed {total_closed} duplicate roadmap issues.")
+          EOF
