@@ -27,7 +27,9 @@ jobs:
 
           repo = os.environ["GITHUB_REPOSITORY"]
           token = os.environ["GITHUB_TOKEN"]
-          issues_path = "docs/OGN_GitHub_Issues_00_250.md"
+
+          # Updated file name EXACTLY as requested
+          issues_path = "docs/OGN GitHub Issues 00 - 250.md"
 
           with open(issues_path, "r", encoding="utf-8") as f:
             content = f.read().strip()
