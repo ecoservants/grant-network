@@ -28,7 +28,7 @@ jobs:
           repo = os.environ["GITHUB_REPOSITORY"]
           token = os.environ["GITHUB_TOKEN"]
 
-          # Updated file name EXACTLY as requested
+          # Your roadmap file (with spaces and hyphen)
           issues_path = "docs/OGN GitHub Issues 00 - 250.md"
 
           with open(issues_path, "r", encoding="utf-8") as f:
@@ -45,14 +45,26 @@ jobs:
               "X-GitHub-Api-Version": "2022-11-28",
           })
 
-          def issue_exists(title: str) -> bool:
-            # Search for an issue with the same title in this repo
-            q = f'repo:{repo} in:title "{title.replace("\"", "")}"'
-            url = "https://api.github.com/search/issues"
-            resp = session.get(url, params={"q": q})
+          # ---- Fetch all existing issue titles once (avoid search rate limits) ----
+          existing_titles = set()
+          page = 1
+          while True:
+            resp = session.get(
+                f"https://api.github.com/repos/{repo}/issues",
+                params={"state": "all", "per_page": 100, "page": page},
+            )
             resp.raise_for_status()
-            data = resp.json()
-            return data.get("total_count", 0) > 0
+            items = resp.json()
+            if not items:
+              break
+            for item in items:
+              # Skip pull requests
+              if "pull_request" in item:
+                continue
+              existing_titles.add(item.get("title", ""))
+            page += 1
+
+          print(f"Found {len(existing_titles)} existing issues in repo")
 
           created = 0
           skipped = 0
@@ -90,7 +102,8 @@ jobs:
             if "ogn-roadmap" not in labels:
               labels.append("ogn-roadmap")
 
-            if issue_exists(title):
+            # Skip if an issue with the same title already exists
+            if title in existing_titles:
               print(f"Skipping existing issue: {title}")
               skipped += 1
               continue
@@ -107,6 +120,7 @@ jobs:
               print(f"Failed to create issue {issue_number}: {resp.status_code} {resp.text}")
             else:
               created += 1
+              existing_titles.add(title)
               print(f"Created issue {issue_number}: {title}")
 
           print(f"Done. Created {created} issues, skipped {skipped} existing issues.")
