@@ -1,0 +1,111 @@
+name: Import OGN Issues from Docs
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  import_ogn_issues:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      issues: write
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Run issue import script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          python - << 'EOF'
+          import os
+          import re
+          import requests
+
+          repo = os.environ["GITHUB_REPOSITORY"]
+          token = os.environ["GITHUB_TOKEN"]
+          issues_path = "docs/OGN_GitHub_Issues_00_250.md"
+
+          with open(issues_path, "r", encoding="utf-8") as f:
+            content = f.read().strip()
+
+          # Split on each new Issue block
+          blocks = re.split(r'\n(?=Issue\s+\d+\s+—\s+)', content)
+          blocks = [b.strip() for b in blocks if b.strip()]
+
+          session = requests.Session()
+          session.headers.update({
+              "Authorization": f"Bearer {token}",
+              "Accept": "application/vnd.github+json",
+              "X-GitHub-Api-Version": "2022-11-28",
+          })
+
+          def issue_exists(title: str) -> bool:
+            # Search for an issue with the same title in this repo
+            q = f'repo:{repo} in:title "{title.replace("\"", "")}"'
+            url = "https://api.github.com/search/issues"
+            resp = session.get(url, params={"q": q})
+            resp.raise_for_status()
+            data = resp.json()
+            return data.get("total_count", 0) > 0
+
+          created = 0
+          skipped = 0
+
+          for block in blocks:
+            lines = block.splitlines()
+            if not lines:
+              continue
+
+            header = lines[0].strip()
+            m = re.match(r'Issue\s+(\d+)\s+—\s+(.*)', header)
+            if not m:
+              print(f"Skipping block with unrecognized header: {header!r}")
+              continue
+
+            issue_number = m.group(1)
+            title = header  # full "Issue N — Phase X: Title"
+
+            body = "\n".join(lines[1:]).strip()
+            if not body:
+              body = f"(Body imported from roadmap for Issue {issue_number}.)"
+
+            # Extract labels from "Suggested Labels" section (if present)
+            label_match = re.search(
+                r"Suggested Labels\s*\n([^\n]+)",
+                block,
+                re.IGNORECASE
+            )
+            labels = []
+            if label_match:
+              labels_line = label_match.group(1)
+              labels = [l.strip() for l in labels_line.split(",") if l.strip()]
+
+            # Always tag with a canonical roadmap label
+            if "ogn-roadmap" not in labels:
+              labels.append("ogn-roadmap")
+
+            if issue_exists(title):
+              print(f"Skipping existing issue: {title}")
+              skipped += 1
+              continue
+
+            create_url = f"https://api.github.com/repos/{repo}/issues"
+            payload = {
+                "title": title,
+                "body": body,
+                "labels": labels,
+            }
+
+            resp = session.post(create_url, json=payload)
+            if resp.status_code >= 300:
+              print(f"Failed to create issue {issue_number}: {resp.status_code} {resp.text}")
+            else:
+              created += 1
+              print(f"Created issue {issue_number}: {title}")
+
+          print(f"Done. Created {created} issues, skipped {skipped} existing issues.")
+          EOF
