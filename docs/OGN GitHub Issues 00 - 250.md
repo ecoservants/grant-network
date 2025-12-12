@@ -1,4 +1,4 @@
-Issue 1 — Phase 0: Define Allow-List Policy System
+## Issue 1 — Phase 0: Define Allow-List Policy System
 ## Summary
 Create the initial allow-list policy defining allowed domains, robots.txt compliance rules, crawl budgets, and inclusion criteria for the Grant Network Community Compute system.
 
@@ -23,7 +23,8 @@ Create the initial allow-list policy defining allowed domains, robots.txt compli
 ## Suggested Labels
 architecture, policy, foundation, community-compute
 
-Issue 2 — Phase 0: Draft Ethical Crawling Guidelines
+
+## Issue 2 — Phase 0: Draft Ethical Crawling Guidelines
 ## Summary
 Develop the ethical crawling standards that govern how the Grant Network’s distributed compute nodes interact with public data sources.
 
@@ -46,7 +47,8 @@ Develop the ethical crawling standards that govern how the Grant Network’s dis
 ## Suggested Labels
 policy, crawler, governance, foundation
 
-Issue 3 — Phase 0: Create Repository Scaffolding
+
+## Issue 3 — Phase 0: Create Repository Scaffolding
 ## Summary
 Set up the complete technical folder structure for Grant Network, including crawler, normalizer, API, compute engine, and integration modules.
 
@@ -68,7 +70,8 @@ Set up the complete technical folder structure for Grant Network, including craw
 ## Suggested Labels
 architecture, setup, foundation
 
-Issue 4 — Phase 1: Implement Grants.gov Connector
+
+## Issue 4 — Phase 1: Implement Grants.gov Connector
 ## Summary
 Build the metadata ingestion connector for Grants.gov to normalize grant listings into the Grant Network dataset model.
 
@@ -91,7 +94,8 @@ Build the metadata ingestion connector for Grants.gov to normalize grant listing
 ## Suggested Labels
 datasets, backend, phase-1, ingestion
 
-Issue 5 — Phase 1: Implement IRS 990/BMF Connector
+
+## Issue 5 — Phase 1: Implement IRS 990/BMF Connector
 ## Summary
 Implement ingestion and normalization for IRS 990 and Business Master File datasets to establish a funder intelligence baseline.
 
@@ -114,7 +118,8 @@ Implement ingestion and normalization for IRS 990 and Business Master File datas
 ## Suggested Labels
 datasets, backend, phase-1, ingestion
 
-Issue 6 — Phase 1: Normalize Grants.gov Field Schema
+
+## Issue 6 — Phase 1: Normalize Grants.gov Field Schema
 ## Summary
 Define and implement the unified field schema for Grants.gov records to ensure all funding opportunities adhere to a consistent data structure across the Grant Network.
 
@@ -137,7 +142,8 @@ Define and implement the unified field schema for Grants.gov records to ensure a
 ## Suggested Labels
 datasets, schema, normalization, phase-1
 
-Issue 7 — Phase 1: Create Unified Funder Schema (IRS + External Sources)
+
+## Issue 7 — Phase 1: Create Unified Funder Schema (IRS + External Sources)
 ## Summary
 Develop the unified funder profile schema that merges IRS 990/BMF data with other external sources to support the Grant Network’s funder intelligence engine.
 
@@ -159,7 +165,8 @@ Develop the unified funder profile schema that merges IRS 990/BMF data with othe
 ## Suggested Labels
 datasets, schema, funder-intelligence, phase-1
 
-Issue 8 — Phase 1: Build Dataset Normalization Framework
+
+## Issue 8 — Phase 1: Build Dataset Normalization Framework
 ## Summary
 Create a standardized normalization framework to convert all ingested datasets into the Grant Network’s internal unified structures.
 
@@ -181,7 +188,8 @@ Create a standardized normalization framework to convert all ingested datasets i
 ## Suggested Labels
 normalization, backend, architecture, phase-1
 
-Issue 9 — Phase 1: Structured Error Logging System
+
+## Issue 9 — Phase 1: Structured Error Logging System
 ## Summary
 Implement a structured error logging system for ingestion, normalization, and compute tasks across the Grant Network.
 
@@ -204,7 +212,8 @@ Implement a structured error logging system for ingestion, normalization, and co
 ## Suggested Labels
 logging, backend, architecture, phase-1
 
-Issue 10 — Phase 1: Build Dataset Validation Engine
+
+## Issue 10 — Phase 1: Build Dataset Validation Engine
 ## Summary
 Create the dataset validation engine used to test incoming data against schemas, detect invalid fields, and flag incomplete or malformed records.
 
@@ -227,7 +236,8 @@ Create the dataset validation engine used to test incoming data against schemas,
 ## Suggested Labels
 validation, backend, datasets, phase-1
 
-Issue 11 — Phase 1: Create Data Provenance Tracking System
+
+## Issue 11 — Phase 1: Create Data Provenance Tracking System
 ## Summary
 Implement a data provenance tracking system to record where each data element originated, how it was transformed, and what processes modified it within the Grant Network.
 
@@ -250,7 +260,8 @@ Implement a data provenance tracking system to record where each data element or
 ## Suggested Labels
 datasets, provenance, backend, phase-1
 
-Issue 12 — Phase 1: Build Ingestion Orchestration Script
+
+## Issue 12 — Phase 1: Build Ingestion Orchestration Script
 ## Summary
 Develop an orchestration script to coordinate dataset ingestion jobs, apply validation, run normalization, and produce final unified records.
 
@@ -273,7 +284,8 @@ Develop an orchestration script to coordinate dataset ingestion jobs, apply vali
 ## Suggested Labels
 ingestion, backend, automation, phase-1
 
-Issue 13 — Phase 1: Create IRS 990/BMF Normalization Pipeline
+
+## Issue 13 — Phase 1: Create IRS 990/BMF Normalization Pipeline
 ## Summary
 Build the normalization pipeline for IRS 990 and BMF datasets, converting raw IRS data into standardized funder profiles for the Grant Network.
 
@@ -296,7 +308,8 @@ Build the normalization pipeline for IRS 990 and BMF datasets, converting raw IR
 ## Suggested Labels
 datasets, IRS, normalization, funder-intelligence, phase-1
 
-Issue 14 — Phase 1: Build Grants.gov Ingestion Script
+
+## Issue 14 — Phase 1: Build Grants.gov Ingestion Script
 ## Summary
 Create the ingestion module for pulling active and archived Grants.gov opportunities into the Grant Network dataset.
 
@@ -319,7 +332,8 @@ Create the ingestion module for pulling active and archived Grants.gov opportuni
 ## Suggested Labels
 datasets, ingestion, grants-gov, phase-1
 
-Issue 15 — Phase 1: Implement Data Deduplication Framework
+
+## Issue 15 — Phase 1: Implement Data Deduplication Framework
 ## Summary
 Develop a deduplication engine to identify and resolve duplicate records across all ingested datasets (IRS, Grants.gov, third-party exports).
 
@@ -342,7 +356,8 @@ Develop a deduplication engine to identify and resolve duplicate records across 
 ## Suggested Labels
 datasets, deduplication, backend, phase-1
 
-Issue 16 — Phase 1: Implement Error Logging & Retry System
+
+## Issue 16 — Phase 1: Implement Error Logging & Retry System
 ## Summary
 Create a centralized error logging and retry system for ingestion, normalization, and dataset transformation jobs within the Grant Network.
 
@@ -366,7 +381,8 @@ Create a centralized error logging and retry system for ingestion, normalization
 ## Suggested Labels
 backend, logging, reliability, phase-1
 
-Issue 17 — Phase 1: Create Unified Funder Schema
+
+## Issue 17 — Phase 1: Create Unified Funder Schema
 ## Summary
 Define a universal schema for funder identities across IRS, Grants.gov, and third-party datasets to establish consistency within the Grant Intelligence system.
 
@@ -389,7 +405,8 @@ Define a universal schema for funder identities across IRS, Grants.gov, and thir
 ## Suggested Labels
 schema, funder-intelligence, datasets, phase-1
 
-Issue 18 — Phase 1: Build Grants.gov Normalization Pipeline
+
+## Issue 18 — Phase 1: Build Grants.gov Normalization Pipeline
 ## Summary
 Develop normalization logic for Grants.gov raw opportunity data to convert federal listings into structured, searchable opportunity profiles.
 
@@ -412,7 +429,8 @@ Develop normalization logic for Grants.gov raw opportunity data to convert feder
 ## Suggested Labels
 datasets, normalization, grants-gov, phase-1
 
-Issue 19 — Phase 1: Create Opportunity Schema
+
+## Issue 19 — Phase 1: Create Opportunity Schema
 ## Summary
 Design a unified schema for grant opportunities across federal, corporate, foundation, and NGO sources.
 
@@ -435,7 +453,8 @@ Design a unified schema for grant opportunities across federal, corporate, found
 ## Suggested Labels
 schema, opportunity, datasets, phase-1
 
-Issue 20 — Phase 1: Build Opportunity Classification Engine
+
+## Issue 20 — Phase 1: Build Opportunity Classification Engine
 ## Summary
 Implement a classification engine that categorizes opportunities by program area, eligibility, and funding type to assist in automated matching.
 
@@ -459,7 +478,7 @@ Implement a classification engine that categorizes opportunities by program area
 classification, datasets, AI-lite, phase-1
 
 
-Issue 21 — Phase 1: Design Opportunity Matching Algorithm (Baseline)
+## Issue 21 — Phase 1: Design Opportunity Matching Algorithm (Baseline)
 ## Summary
 Develop a baseline algorithm to match EcoServants projects and user-defined filters with relevant funding opportunities based on keywords, categories, and eligibility criteria.
 
@@ -482,7 +501,8 @@ Develop a baseline algorithm to match EcoServants projects and user-defined filt
 ## Suggested Labels
 matching, algorithms, opportunity-search, phase-1
 
-Issue 22 — Phase 1: Build IRS 990 Ingestion Script
+
+## Issue 22 — Phase 1: Build IRS 990 Ingestion Script
 ## Summary
 Create an ingestion pipeline that downloads, extracts, and prepares IRS 990 datasets for normalization and funder intelligence.
 
@@ -505,7 +525,8 @@ Create an ingestion pipeline that downloads, extracts, and prepares IRS 990 data
 ## Suggested Labels
 datasets, ingestion, irs-990, phase-1
 
-Issue 23 — Phase 1: Create IRS 990 Normalization Pipeline
+
+## Issue 23 — Phase 1: Create IRS 990 Normalization Pipeline
 ## Summary
 Normalize IRS 990 funder data into the unified funder profile schema.
 
@@ -528,7 +549,7 @@ Normalize IRS 990 funder data into the unified funder profile schema.
 ## Suggested Labels
 normalization, datasets, funder-intelligence, phase-1
 
-Issue 24 — Phase 1: Build Funder-Opp Linking Engine (Baseline)
+## Issue 24 — Phase 1: Build Funder-Opp Linking Engine (Baseline)
 ## Summary
 Implement a baseline algorithm to link funders with their grant opportunities across Grants.gov, IRS 990, and third-party sources.
 
@@ -551,7 +572,8 @@ Implement a baseline algorithm to link funders with their grant opportunities ac
 ## Suggested Labels
 linking, algorithms, funder-intelligence, phase-1
 
-Issue 25 — Phase 1: Define Core Database Schema for OGN
+
+## Issue 25 — Phase 1: Define Core Database Schema for OGN
 ## Summary
 Design the initial relational database schema for the Open Grant Network, supporting funders, opportunities, filings, and metadata.
 
@@ -575,7 +597,7 @@ Design the initial relational database schema for the Open Grant Network, suppor
 database, architecture, schema, phase-1
 
 
-Issue 26 — Phase 1: Implement Opportunity Deadline Normalization
+## Issue 26 — Phase 1: Implement Opportunity Deadline Normalization
 ## Summary
 Standardize all opportunity deadlines (forecasted, posted, closing, rolling) into a consistent datetime format to ensure accurate filtering and time-based matching.
 
@@ -598,7 +620,8 @@ Standardize all opportunity deadlines (forecasted, posted, closing, rolling) int
 ## Suggested Labels
 normalization, datasets, opportunity, phase-1
 
-Issue 27 — Phase 1: Build Opportunity Amount Normalization
+
+## Issue 27 — Phase 1: Build Opportunity Amount Normalization
 ## Summary
 Normalize funding amounts, ranges, minimums, maximums, and multi-tiered awards into a consistent numeric structure for use in filtering and matching.
 
@@ -621,7 +644,8 @@ Normalize funding amounts, ranges, minimums, maximums, and multi-tiered awards i
 ## Suggested Labels
 datasets, normalization, opportunity, phase-1
 
-Issue 28 — Phase 1: Build Opportunity Eligibility Normalizer
+
+## Issue 28 — Phase 1: Build Opportunity Eligibility Normalizer
 ## Summary
 Standardize eligibility fields from federal, foundation, and scraped datasets into unified categories for filtering and matching.
 
@@ -644,7 +668,8 @@ Standardize eligibility fields from federal, foundation, and scraped datasets in
 ## Suggested Labels
 normalization, opportunity, eligibility, phase-1
 
-Issue 29 — Phase 1: Build Funder Geographic Normalization
+
+## Issue 29 — Phase 1: Build Funder Geographic Normalization
 ## Summary
 Normalize location fields across IRS, Grants.gov, and external sources to support geographic filters and region-based matching.
 
@@ -667,7 +692,8 @@ Normalize location fields across IRS, Grants.gov, and external sources to suppor
 ## Suggested Labels
 normalization, datasets, funder-intelligence, phase-1
 
-Issue 30 — Phase 1: Build Opportunity Geographic Filters
+
+## Issue 30 — Phase 1: Build Opportunity Geographic Filters
 ## Summary
 Implement geographic filtering logic that determines whether an opportunity applies to a specific region, state, or country, based on normalized opportunity metadata.
 
@@ -690,7 +716,8 @@ Implement geographic filtering logic that determines whether an opportunity appl
 ## Suggested Labels
 datasets, classification, opportunity, phase-1
 
-Issue 31 — Phase 2: Implement Distributed Ingestion Job Dispatching
+
+## Issue 31 — Phase 2: Implement Distributed Ingestion Job Dispatching
 ## Summary
 Implement the system that sends large-scale ingestion tasks (fetch dataset, crawl URL batch, retrieve API slice) to Community Compute nodes using the CC job-dispatch API.
 
@@ -714,7 +741,8 @@ Implement the system that sends large-scale ingestion tasks (fetch dataset, craw
 ## Suggested Labels
 phase-2, ingestion, distributed-systems, community-compute, backend
 
-Issue 32 — Phase 2: Build Distributed HTML-to-JSON Extraction Pipeline
+
+## Issue 32 — Phase 2: Build Distributed HTML-to-JSON Extraction Pipeline
 ## Summary
 Create a distributed HTML extraction process where CC nodes convert raw HTML pages into structured JSON blocks ready for normalization.
 
@@ -737,7 +765,8 @@ Create a distributed HTML extraction process where CC nodes convert raw HTML pag
 ## Suggested Labels
 phase-2, extraction, parsing, community-compute, backend
 
-Issue 33 — Phase 2: Implement Distributed Normalization Pipeline (Using CC Results)
+
+## Issue 33 — Phase 2: Implement Distributed Normalization Pipeline (Using CC Results)
 ## Summary
 Normalize extracted JSON data into Grant Schema v1 using distributed compute nodes for field-level cleaning and transformation.
 
@@ -760,7 +789,8 @@ Normalize extracted JSON data into Grant Schema v1 using distributed compute nod
 ## Suggested Labels
 phase-2, normalization, distributed-systems, datasets, community-compute
 
-Issue 34 — Phase 2: Implement Distributed Stitching of Multi-Page Opportunities
+
+## Issue 34 — Phase 2: Implement Distributed Stitching of Multi-Page Opportunities
 ## Summary
 Many grant listings span multiple pages (overview, eligibility, instructions, attachments). Build a stitching engine that merges fragments processed by different CC nodes into a single coherent record.
 
@@ -783,7 +813,8 @@ Many grant listings span multiple pages (overview, eligibility, instructions, at
 ## Suggested Labels
 phase-2, stitching, datasets, distributed-systems, community-compute
 
-Issue 35 — Phase 2: Implement Distributed Deduplication Engine
+
+## Issue 35 — Phase 2: Implement Distributed Deduplication Engine
 ## Summary
 Large-scale ingestion produces many duplicate or near-duplicate records across portals. Create a distributed dedupe workflow using CC parallel comparison jobs.
 
@@ -806,7 +837,8 @@ Large-scale ingestion produces many duplicate or near-duplicate records across p
 ## Suggested Labels
 phase-2, deduplication, data-quality, distributed-systems, community-compute
 
-Issue 36 — Phase 2: Implement Distributed Attachment Retrieval Pipeline
+
+## Issue 36 — Phase 2: Implement Distributed Attachment Retrieval Pipeline
 ## Summary
 Many grant listings contain linked documents (PDFs, DOCXs, supplemental instructions, forms). Implement a distributed attachment retrieval system powered by CC nodes, with safe-file handling and metadata tagging.
 
@@ -829,7 +861,8 @@ Many grant listings contain linked documents (PDFs, DOCXs, supplemental instruct
 ## Suggested Labels
 phase-2, attachments, ingestion, community-compute, backend
 
-Issue 37 — Phase 2: Implement Distributed Content Validation & Sanity Checks
+
+## Issue 37 — Phase 2: Implement Distributed Content Validation & Sanity Checks
 ## Summary
 After extraction and normalization, each opportunity must undergo automated validation across CC nodes to ensure record accuracy, completeness, and structural consistency.
 
@@ -851,8 +884,7 @@ After extraction and normalization, each opportunity must undergo automated vali
 
 ## Suggested Labels
 phase-2, validation, quality-control, community-compute
-
-Issue 38 — Phase 2: Implement Distributed Geographic Classification
+## Issue 38 — Phase 2: Implement Distributed Geographic Classification
 ## Summary
 Opportunities often contain ambiguous location data. Build a distributed geographic classifier that parses region strings and maps them to standard geographic codes using CC nodes.
 
@@ -875,7 +907,8 @@ Opportunities often contain ambiguous location data. Build a distributed geograp
 ## Suggested Labels
 phase-2, geography, classification, community-compute, datasets
 
-Issue 39 — Phase 2: Implement Distributed Opportunity Categorization
+
+## Issue 39 — Phase 2: Implement Distributed Opportunity Categorization
 ## Summary
 Many sources do not provide clear categories for grant opportunities. Build a CC-powered categorization system that assigns opportunities to standardized categories using pattern recognition and keyword inference.
 
@@ -898,7 +931,8 @@ Many sources do not provide clear categories for grant opportunities. Build a CC
 ## Suggested Labels
 phase-2, categorization, metadata, community-compute, machine-learning
 
-Issue 40 — Phase 2: Implement Distributed Funding Amount & Eligibility Extraction
+
+## Issue 40 — Phase 2: Implement Distributed Funding Amount & Eligibility Extraction
 ## Summary
 Extracting funding amounts and eligibility details from HTML or attachment text often requires deeper parsing. Build a distributed extraction pipeline leveraging CC nodes to handle complex numeric and text fields.
 
@@ -921,7 +955,8 @@ Extracting funding amounts and eligibility details from HTML or attachment text 
 ## Suggested Labels
 phase-2, extraction, nlp, datasets, community-compute
 
-Issue 41 — Phase 2: Implement Distributed Deadline Extraction & Validation
+
+## Issue 41 — Phase 2: Implement Distributed Deadline Extraction & Validation
 ## Summary
 Deadlines appear in many inconsistent formats across portals. Build a distributed extraction and validation pipeline using CC nodes to convert raw deadlines into normalized datetime fields.
 
@@ -944,7 +979,8 @@ Deadlines appear in many inconsistent formats across portals. Build a distribute
 ## Suggested Labels
 phase-2, deadlines, extraction, normalization, community-compute
 
-Issue 42 — Phase 2: Implement Distributed Multi-Source Opportunity Merging
+
+## Issue 42 — Phase 2: Implement Distributed Multi-Source Opportunity Merging
 ## Summary
 Grants often appear on multiple websites with partial or conflicting information. Build a distributed merging pipeline that consolidates opportunity records across sources.
 
@@ -967,7 +1003,8 @@ Grants often appear on multiple websites with partial or conflicting information
 ## Suggested Labels
 phase-2, merging, datasets, distributed-systems, community-compute
 
-Issue 43 — Phase 2: Implement Distributed Link Expansion & Discovery
+
+## Issue 43 — Phase 2: Implement Distributed Link Expansion & Discovery
 ## Summary
 Many grant portals contain secondary links to program details, archived guidance, eligibility notes, or related opportunities. Build a distributed link-expansion system powered by CC nodes.
 
@@ -990,7 +1027,8 @@ Many grant portals contain secondary links to program details, archived guidance
 ## Suggested Labels
 phase-2, crawling, link-discovery, community-compute
 
-Issue 44 — Phase 2: Implement Distributed Text Cleanup & Semantic Structuring
+
+## Issue 44 — Phase 2: Implement Distributed Text Cleanup & Semantic Structuring
 ## Summary
 Grant text extracted from HTML or PDFs includes noise (menus, headers, disclaimers). Build a distributed cleanup and semantic structuring pipeline for readable and analyzable grant content.
 
@@ -1013,7 +1051,8 @@ Grant text extracted from HTML or PDFs includes noise (menus, headers, disclaime
 ## Suggested Labels
 phase-2, text-processing, nlp, community-compute, datasets
 
-Issue 45 — Phase 2: Implement Distributed Grant Opportunity Hashing & Identity Resolution
+
+## Issue 45 — Phase 2: Implement Distributed Grant Opportunity Hashing & Identity Resolution
 ## Summary
 Build a distributed hashing and identity resolution service so all fragments, URLs, attachments, and extracted fields for the same grant map to a single opportunity identity.
 
@@ -1036,7 +1075,8 @@ Build a distributed hashing and identity resolution service so all fragments, UR
 ## Suggested Labels
 phase-2, identity-resolution, hashing, distributed-systems, community-compute
 
-Issue 46 — Phase 2: Implement Distributed Duplicate Detection
+
+## Issue 46 — Phase 2: Implement Distributed Duplicate Detection
 ## Summary
 Create a distributed deduplication system that detects and groups duplicate or near-duplicate opportunities across multiple sources, crawlers, and ingestion pipelines.
 
@@ -1062,7 +1102,8 @@ Create a distributed deduplication system that detects and groups duplicate or n
 ## Suggested Labels
 phase-2, datasets, deduplication, normalization, distributed-systems, community-compute, backend
 
-Issue 47 — Phase 2: Implement Distributed OCR Extraction Pipeline
+
+## Issue 47 — Phase 2: Implement Distributed OCR Extraction Pipeline
 ## Summary
 Enable Community Compute (CC) nodes to extract text from PDFs and scanned documents using distributed OCR to support grants with non-HTML attachments.
 
@@ -1088,7 +1129,7 @@ Enable Community Compute (CC) nodes to extract text from PDFs and scanned docume
 ## Suggested Labels
 phase-2, ocr, extraction, community-compute, backend
 
-Issue 48 — Phase 2: Implement Distributed Attachment Scraping & Metadata Extraction
+## Issue 48 — Phase 2: Implement Distributed Attachment Scraping & Metadata Extraction
 ## Summary
 Add support for CC nodes to download, classify, extract metadata from, and store grant-related attachments such as PDFs, images, and supplemental files.
 
@@ -1113,7 +1154,8 @@ Add support for CC nodes to download, classify, extract metadata from, and store
 ## Suggested Labels
 phase-2, attachments, extraction, classification, community-compute
 
-Issue 49 — Phase 2: Implement Distributed Link Discovery & Site-Mapping
+
+## Issue 49 — Phase 2: Implement Distributed Link Discovery & Site-Mapping
 ## Summary
 Enable CC nodes to crawl grant-related websites to automatically discover relevant links, subpages, and publication structures needed for extraction.
 
@@ -1138,7 +1180,8 @@ Enable CC nodes to crawl grant-related websites to automatically discover releva
 ## Suggested Labels
 phase-2, crawling, discovery, datasets, community-compute
 
-Issue 50 — Phase 2: Implement Distributed Language Detection & Document Tagging
+
+## Issue 50 — Phase 2: Implement Distributed Language Detection & Document Tagging
 ## Summary
 Add language detection and tagging to extracted text, OCR output, HTML blocks, and attachments to support multilingual normalization.
 
@@ -1162,7 +1205,8 @@ Add language detection and tagging to extracted text, OCR output, HTML blocks, a
 ## Suggested Labels
 phase-2, language-processing, datasets, community-compute, nlp
 
-Issue 51 — Phase 2: Implement Distributed HTML Block Cleanup & Template Normalization
+
+## Issue 51 — Phase 2: Implement Distributed HTML Block Cleanup & Template Normalization
 ## Summary
 Standardize and clean extracted HTML content into reusable block structures suitable for downstream NLP and field extraction.
 
@@ -1186,7 +1230,8 @@ Standardize and clean extracted HTML content into reusable block structures suit
 ## Suggested Labels
 phase-2, html, text-cleanup, nlp, community-compute, backend
 
-Issue 52 — Phase 3: Build Distributed Opportunity Eligibility Classification
+
+## Issue 52 — Phase 3: Build Distributed Opportunity Eligibility Classification
 ## Summary
 Develop a distributed classification pipeline that determines whether an opportunity applies to specific eligibility categories such as nonprofits, individuals, municipalities, small businesses, or research institutions.
 
@@ -1212,7 +1257,8 @@ Develop a distributed classification pipeline that determines whether an opportu
 ## Suggested Labels
 phase-3, classification, eligibility, datasets, community-compute, nlp
 
-Issue 53 — Phase 3: Implement Grant Category & Sector Classification
+
+## Issue 53 — Phase 3: Implement Grant Category & Sector Classification
 ## Summary
 Create a multi-label classification system that assigns grant opportunities to sectors such as environment, health, education, infrastructure, research, and community development.
 
@@ -1238,7 +1284,8 @@ Create a multi-label classification system that assigns grant opportunities to s
 ## Suggested Labels
 phase-3, nlp, tags, classification, datasets, community-compute
 
-Issue 54 — Phase 3: Build Opportunity Value & Funding Amount Extraction
+
+## Issue 54 — Phase 3: Build Opportunity Value & Funding Amount Extraction
 ## Summary
 Extract, normalize, and classify the monetary values associated with grant opportunities (award minimum, award maximum, total funding pool, number of awards).
 
@@ -1264,7 +1311,8 @@ Extract, normalize, and classify the monetary values associated with grant oppor
 ## Suggested Labels
 phase-3, extraction, normalization, funding, datasets, nlp
 
-Issue 55 — Phase 3: Implement Geographic Scope Extraction & Normalization
+
+## Issue 55 — Phase 3: Implement Geographic Scope Extraction & Normalization
 ## Summary
 Extract geographic restrictions (e.g. U.S.-only, state-specific, county-specific, tribal, international) from opportunity text.
 
@@ -1290,7 +1338,8 @@ Extract geographic restrictions (e.g. U.S.-only, state-specific, county-specific
 ## Suggested Labels
 phase-3, geographic, extraction, normalization, datasets
 
-Issue 56 — Phase 3: Build Deadline Type Classification & Urgency Scoring
+
+## Issue 56 — Phase 3: Build Deadline Type Classification & Urgency Scoring
 ## Summary
 Classify deadlines (forecasted, posted, rolling, fixed-date) and compute an urgency score used for opportunity ranking.
 
@@ -1316,7 +1365,8 @@ Classify deadlines (forecasted, posted, rolling, fixed-date) and compute an urge
 ## Suggested Labels
 phase-3, deadlines, scoring, ranking, classification, datasets
 
-Issue 57 — Phase 3: Implement Distributed Grant Summary Generation (Abstractive)
+
+## Issue 57 — Phase 3: Implement Distributed Grant Summary Generation (Abstractive)
 ## Summary
 Generate concise, standardized summaries for each opportunity using distributed NLP models that condense eligibility, focus area, deadlines, and key details.
 
@@ -1342,7 +1392,7 @@ Generate concise, standardized summaries for each opportunity using distributed 
 ## Suggested Labels
 phase-3, nlp, summarization, datasets, community-compute
 
-Issue 58 — Phase 3: Implement Entity Extraction (Funder, Agency, Program)
+## Issue 58 — Phase 3: Implement Entity Extraction (Funder, Agency, Program)
 ## Summary
 Extract named entities such as funder name, agency, department, and program title from opportunity text and metadata.
 
@@ -1368,7 +1418,8 @@ Extract named entities such as funder name, agency, department, and program titl
 ## Suggested Labels
 phase-3, nlp, ner, extraction, datasets, community-compute
 
-Issue 59 — Phase 3: Implement Distributed Document Embedding Generation
+
+## Issue 59 — Phase 3: Implement Distributed Document Embedding Generation
 ## Summary
 Generate vector embeddings for opportunities, attachments, OCR content, and structured fields to support semantic search and clustering.
 
@@ -1395,7 +1446,7 @@ Generate vector embeddings for opportunities, attachments, OCR content, and stru
 phase-3, embeddings, vector-search, nlp, community-compute
 
 
-Issue 60 — Phase 3: Implement Opportunity Similarity & Recommendation Engine
+## Issue 60 — Phase 3: Implement Opportunity Similarity & Recommendation Engine
 ## Summary
 Use embeddings and structured fields to compute similarity scores between opportunities and recommend related grants.
 
@@ -1421,7 +1472,8 @@ Use embeddings and structured fields to compute similarity scores between opport
 ## Suggested Labels
 phase-3, similarity, recommendations, vector-search, datasets
 
-Issue 61 — Phase 3: Implement Opportunity Quality Scoring (Completeness + Confidence)
+
+## Issue 61 — Phase 3: Implement Opportunity Quality Scoring (Completeness + Confidence)
 ## Summary
 Compute a composite score for each opportunity based on metadata completeness, extraction confidence, and NLP classifier certainty.
 
@@ -1447,7 +1499,8 @@ Compute a composite score for each opportunity based on metadata completeness, e
 ## Suggested Labels
 phase-3, quality, scoring, ranking, datasets, community-compute
 
-Issue 62 — Phase 3: Implement Award Type Extraction (Grant, Fellowship, Cooperative Agreement)
+
+## Issue 62 — Phase 3: Implement Award Type Extraction (Grant, Fellowship, Cooperative Agreement)
 ## Summary
 Extract and classify award types such as grants, fellowships, scholarships, cooperative agreements, and contracts based on opportunity text.
 
@@ -1473,7 +1526,8 @@ Extract and classify award types such as grants, fellowships, scholarships, coop
 ## Suggested Labels
 phase-3, classification, nlp, datasets, community-compute
 
-Issue 63 — Phase 3: Implement Distributed Compliance & Validity Checks
+
+## Issue 63 — Phase 3: Implement Distributed Compliance & Validity Checks
 ## Summary
 Validate opportunity records for internal consistency, required fields, correct formatting, link validity, and structural completeness.
 
@@ -1498,7 +1552,8 @@ Validate opportunity records for internal consistency, required fields, correct 
 ## Suggested Labels
 phase-3, validation, quality, datasets, community-compute
 
-Issue 64 — Phase 3: Implement Distributed Eligibility Rule Parsing (Advanced Logic)
+
+## Issue 64 — Phase 3: Implement Distributed Eligibility Rule Parsing (Advanced Logic)
 ## Summary
 Parse complex eligibility logic (e.g., “nonprofits AND (tribal OR municipal)”) and convert it into structured boolean expressions.
 
@@ -1524,7 +1579,8 @@ Parse complex eligibility logic (e.g., “nonprofits AND (tribal OR municipal)�
 ## Suggested Labels
 phase-3, eligibility, parsing, nlp, datasets, community-compute
 
-Issue 65 — Phase 3: Build Grant Opportunity Clustering Engine
+
+## Issue 65 — Phase 3: Build Grant Opportunity Clustering Engine
 ## Summary
 Cluster similar grant opportunities using embeddings, categorical metadata, and extracted fields to reveal thematic groupings.
 
@@ -1550,7 +1606,8 @@ Cluster similar grant opportunities using embeddings, categorical metadata, and 
 ## Suggested Labels
 phase-3, clustering, embeddings, datasets, nlp, community-compute
 
-Issue 66 — Phase 3: Implement Multi-Source Opportunity Merging (Graph-Based)
+
+## Issue 66 — Phase 3: Implement Multi-Source Opportunity Merging (Graph-Based)
 ## Summary
 Merge identical or related opportunities sourced from multiple portals or funder sites using a graph-based linking approach.
 
@@ -1576,7 +1633,8 @@ Merge identical or related opportunities sourced from multiple portals or funder
 ## Suggested Labels
 phase-3, graph, merging, datasets, distributed-systems, community-compute
 
-Issue 67 — Phase 3: Implement Opportunity Timeline Extraction (Milestones & Events)
+
+## Issue 67 — Phase 3: Implement Opportunity Timeline Extraction (Milestones & Events)
 ## Summary
 Extract structured milestones such as posting date, info session dates, LOI deadlines, webinar dates, and full proposal deadlines.
 
@@ -1602,7 +1660,8 @@ Extract structured milestones such as posting date, info session dates, LOI dead
 ## Suggested Labels
 phase-3, timelines, extraction, nlp, datasets, community-compute
 
-Issue 68 — Phase 3: Implement Contact Information Extraction (Emails, Phones, Departments)
+
+## Issue 68 — Phase 3: Implement Contact Information Extraction (Emails, Phones, Departments)
 ## Summary
 Extract contact emails, phone numbers, office names, and point-of-contact data from grant pages and attachments.
 
@@ -1628,7 +1687,7 @@ Extract contact emails, phone numbers, office names, and point-of-contact data f
 ## Suggested Labels
 phase-3, extraction, contact-info, datasets, community-compute
 
-Issue 69 — Phase 3: Implement Keyword & Topic Tagging (Multi-Label)
+## Issue 69 — Phase 3: Implement Keyword & Topic Tagging (Multi-Label)
 ## Summary
 Assign rich keyword tags to opportunities using NLP topic modeling combined with curated domain taxonomies.
 
@@ -1654,7 +1713,8 @@ Assign rich keyword tags to opportunities using NLP topic modeling combined with
 ## Suggested Labels
 phase-3, tagging, nlp, classification, datasets, community-compute
 
-Issue 70 — Phase 3: Implement Funding Source Linking (IRS 990 + Public Databases)
+
+## Issue 70 — Phase 3: Implement Funding Source Linking (IRS 990 + Public Databases)
 ## Summary
 Match opportunities and funders to external databases such as IRS 990, SAM.gov, and state-level registries.
 
@@ -1680,7 +1740,8 @@ Match opportunities and funders to external databases such as IRS 990, SAM.gov, 
 ## Suggested Labels
 phase-3, entity-linking, funders, datasets, community-compute, registry
 
-Issue 71 — Phase 3: Implement Opportunity Risk & Feasibility Scoring
+
+## Issue 71 — Phase 3: Implement Opportunity Risk & Feasibility Scoring
 ## Summary
 Generate scores reflecting opportunity risk, feasibility, competition level, and likelihood of award success.
 
@@ -1706,7 +1767,8 @@ Generate scores reflecting opportunity risk, feasibility, competition level, and
 ## Suggested Labels
 phase-3, scoring, analytics, ranking, datasets, community-compute
 
-Issue 72 — Phase 3: Implement Opportunity Confidence Weighting (Model Agreement)
+
+## Issue 72 — Phase 3: Implement Opportunity Confidence Weighting (Model Agreement)
 ## Summary
 Compute confidence scores for each extracted field based on agreement across multiple models, heuristics, and CC-node outputs.
 
@@ -1732,7 +1794,8 @@ Compute confidence scores for each extracted field based on agreement across mul
 ## Suggested Labels
 phase-3, scoring, analytics, quality, datasets, community-compute
 
-Issue 73 — Phase 3: Implement Multi-Document Opportunity Assembly (HTML + PDFs + OCR)
+
+## Issue 73 — Phase 3: Implement Multi-Document Opportunity Assembly (HTML + PDFs + OCR)
 ## Summary
 Combine text from HTML pages, PDFs, and OCR output into a unified structured opportunity document.
 
@@ -1758,7 +1821,8 @@ Combine text from HTML pages, PDFs, and OCR output into a unified structured opp
 ## Suggested Labels
 phase-3, document-processing, extraction, normalization, community-compute
 
-Issue 74 — Phase 3: Implement Opportunity Versioning & Change Detection
+
+## Issue 74 — Phase 3: Implement Opportunity Versioning & Change Detection
 ## Summary
 Detect changes in opportunities across crawls, maintaining version history for deadlines, awards, descriptions, and attachments.
 
@@ -1784,7 +1848,8 @@ Detect changes in opportunities across crawls, maintaining version history for d
 ## Suggested Labels
 phase-3, versioning, change-detection, datasets, community-compute
 
-Issue 75 — Phase 3: Implement Attachment-to-Field Extraction (Budget Templates, Forms)
+
+## Issue 75 — Phase 3: Implement Attachment-to-Field Extraction (Budget Templates, Forms)
 ## Summary
 Extract structured fields from grant attachments such as budget templates, application forms, and checklists.
 
@@ -1810,7 +1875,8 @@ Extract structured fields from grant attachments such as budget templates, appli
 ## Suggested Labels
 phase-3, attachments, extraction, ocr, datasets, community-compute
 
-Issue 76 — Phase 3: Implement Programmatic Opportunity Linking (Parent/Child Grants)
+
+## Issue 76 — Phase 3: Implement Programmatic Opportunity Linking (Parent/Child Grants)
 ## Summary
 Identify parent–child relationships between grants such as programs with multiple funding tracks, renewals, or multi-phase opportunities.
 
@@ -1836,7 +1902,8 @@ Identify parent–child relationships between grants such as programs with multi
 ## Suggested Labels
 phase-3, linking, hierarchy, datasets, community-compute
 
-Issue 77 — Phase 3: Implement Grant Program Thematic Modeling (Topic Discovery)
+
+## Issue 77 — Phase 3: Implement Grant Program Thematic Modeling (Topic Discovery)
 ## Summary
 Use topic modeling and semantic clustering to identify thematic patterns across grants and group them into interpretable topics.
 
@@ -1862,7 +1929,8 @@ Use topic modeling and semantic clustering to identify thematic patterns across 
 ## Suggested Labels
 phase-3, topics, nlp, clustering, datasets, community-compute
 
-Issue 78 — Phase 3: Implement Funder Relationship Graph (Institution ↔ Program Links)
+
+## Issue 78 — Phase 3: Implement Funder Relationship Graph (Institution ↔ Program Links)
 ## Summary
 Build a graph structure that connects funders, programs, sub-programs, and opportunities to reveal institutional relationships.
 
@@ -1888,7 +1956,8 @@ Build a graph structure that connects funders, programs, sub-programs, and oppor
 ## Suggested Labels
 phase-3, graph, funders, relationships, datasets, community-compute
 
-Issue 79 — Phase 3: Implement Opportunity Accessibility & Clarity Scoring
+
+## Issue 79 — Phase 3: Implement Opportunity Accessibility & Clarity Scoring
 ## Summary
 Compute a score evaluating how accessible and user-friendly the opportunity is (clarity of description, eligibility transparency, complexity).
 
@@ -1914,7 +1983,7 @@ Compute a score evaluating how accessible and user-friendly the opportunity is (
 ## Suggested Labels
 phase-3, scoring, readability, nlp, analytics, community-compute
 
-Issue 80 — Phase 3: Implement Distributed Data Quality Repair (Auto-Fix Engine)
+## Issue 80 — Phase 3: Implement Distributed Data Quality Repair (Auto-Fix Engine)
 ## Summary
 Automatically repair common data quality issues—broken URLs, inconsistent formats, missing fields—using rules and NLP-based predictions.
 
@@ -1940,7 +2009,8 @@ Automatically repair common data quality issues—broken URLs, inconsistent form
 ## Suggested Labels
 phase-3, data-cleaning, automation, quality, community-compute
 
-Issue 81 — Phase 3: Implement Opportunity Difficulty & Effort Estimation
+
+## Issue 81 — Phase 3: Implement Opportunity Difficulty & Effort Estimation
 ## Summary
 Estimate how difficult each opportunity is to apply for, based on required documents, eligibility strictness, deadlines, and historical patterns.
 
@@ -1966,7 +2036,8 @@ Estimate how difficult each opportunity is to apply for, based on required docum
 ## Suggested Labels
 phase-3, scoring, analytics, user-experience, datasets, community-compute
 
-Issue 82 — Phase 3: Implement Cross-Portal Opportunity Alignment (Canonical Record Builder)
+
+## Issue 82 — Phase 3: Implement Cross-Portal Opportunity Alignment (Canonical Record Builder)
 ## Summary
 Align opportunities sourced from multiple portals (Grants.gov, SAM.gov, agency sites, private foundations) into a unified canonical record.
 
@@ -1992,7 +2063,8 @@ Align opportunities sourced from multiple portals (Grants.gov, SAM.gov, agency s
 ## Suggested Labels
 phase-3, merging, canonicalization, datasets, community-compute
 
-Issue 83 — Phase 3: Implement Opportunity Scoring Engine (Composite Metrics)
+
+## Issue 83 — Phase 3: Implement Opportunity Scoring Engine (Composite Metrics)
 ## Summary
 Compute a composite score that blends quality, urgency, relevance, feasibility, clarity, and competition level.
 
@@ -2018,7 +2090,8 @@ Compute a composite score that blends quality, urgency, relevance, feasibility, 
 ## Suggested Labels
 phase-3, scoring, analytics, ranking, datasets, community-compute
 
-Issue 84 — Phase 3: Implement Distributed Compliance Tagging (DEI, Climate, Rural, STEM)
+
+## Issue 84 — Phase 3: Implement Distributed Compliance Tagging (DEI, Climate, Rural, STEM)
 ## Summary
 Identify whether opportunities support specific compliance or policy categories such as DEI, sustainability, climate action, rural communities, or STEM initiatives.
 
@@ -2044,7 +2117,8 @@ Identify whether opportunities support specific compliance or policy categories 
 ## Suggested Labels
 phase-3, compliance, tagging, nlp, datasets, community-compute
 
-Issue 85 — Phase 3: Implement Opportunity Completeness Scoring (Field Coverage)
+
+## Issue 85 — Phase 3: Implement Opportunity Completeness Scoring (Field Coverage)
 ## Summary
 Score opportunities based on how complete and well-populated their structured fields are after the extraction and normalization stages.
 
@@ -2070,7 +2144,8 @@ Score opportunities based on how complete and well-populated their structured fi
 ## Suggested Labels
 phase-3, scoring, quality, completeness, datasets, community-compute
 
-Issue 86 — Phase 3: Implement Opportunity Lifecycle Modeling (Forecast → Posted → Closed)
+
+## Issue 86 — Phase 3: Implement Opportunity Lifecycle Modeling (Forecast → Posted → Closed)
 ## Summary
 Model the lifecycle of each opportunity, tracking transitions such as forecast release, posting date, updates, and final closing.
 
@@ -2096,7 +2171,8 @@ Model the lifecycle of each opportunity, tracking transitions such as forecast r
 ## Suggested Labels
 phase-3, lifecycle, state-machine, datasets, community-compute
 
-Issue 87 — Phase 3: Implement Temporal Trend Analysis (Funding Patterns Over Time)
+
+## Issue 87 — Phase 3: Implement Temporal Trend Analysis (Funding Patterns Over Time)
 ## Summary
 Analyze historical opportunity data to identify funding trends, cycles, and seasonal patterns across sectors, agencies, and regions.
 
@@ -2122,7 +2198,8 @@ Analyze historical opportunity data to identify funding trends, cycles, and seas
 ## Suggested Labels
 phase-3, analytics, trends, time-series, datasets, community-compute
 
-Issue 88 — Phase 3: Implement Grant Opportunity Popularity & Demand Estimation
+
+## Issue 88 — Phase 3: Implement Grant Opportunity Popularity & Demand Estimation
 ## Summary
 Estimate demand for opportunities using web metrics, textual indicators, historical applicant volume, and inferred competition levels.
 
@@ -2148,7 +2225,8 @@ Estimate demand for opportunities using web metrics, textual indicators, histori
 ## Suggested Labels
 phase-3, scoring, analytics, ranking, datasets, community-compute
 
-Issue 89 — Phase 3: Implement Grant Opportunity Readability Normalization
+
+## Issue 89 — Phase 3: Implement Grant Opportunity Readability Normalization
 ## Summary
 Normalize all extracted text into consistent readability levels and structure to improve downstream NLP and summarization performance.
 
@@ -2174,7 +2252,7 @@ Normalize all extracted text into consistent readability levels and structure to
 ## Suggested Labels
 phase-3, nlp, normalization, readability, datasets, community-compute
 
-Issue 90 — Phase 3: Implement Multilingual Translation (English-Normalized Output)
+## Issue 90 — Phase 3: Implement Multilingual Translation (English-Normalized Output)
 ## Summary
 Translate non-English opportunities into English-normalized text for unified processing while storing original-language versions.
 
@@ -2200,7 +2278,8 @@ Translate non-English opportunities into English-normalized text for unified pro
 ## Suggested Labels
 phase-3, translation, multilingual, nlp, datasets, community-compute
 
-Issue 91 — Phase 3: Implement Opportunity Cross-Referencing (Similar Programs & Alternatives)
+
+## Issue 91 — Phase 3: Implement Opportunity Cross-Referencing (Similar Programs & Alternatives)
 ## Summary
 Automatically identify alternative or related opportunities based on sector, eligibility, region, funding range, and embeddings.
 
@@ -2226,7 +2305,8 @@ Automatically identify alternative or related opportunities based on sector, eli
 ## Suggested Labels
 phase-3, recommendations, similarity, datasets, community-compute
 
-Issue 92 — Phase 3: Implement Distributed Data Provenance Tracking
+
+## Issue 92 — Phase 3: Implement Distributed Data Provenance Tracking
 ## Summary
 Track the origin, transformation, and processing history of each opportunity, ensuring full transparency across crawls, extractors, and CC jobs.
 
@@ -2252,7 +2332,8 @@ Track the origin, transformation, and processing history of each opportunity, en
 ## Suggested Labels
 phase-3, provenance, lineage, datasets, community-compute
 
-Issue 93 — Phase 3: Implement Opportunity Redaction & Sensitive Data Filtering
+
+## Issue 93 — Phase 3: Implement Opportunity Redaction & Sensitive Data Filtering
 ## Summary
 Automatically detect and filter out sensitive or personal information from crawled documents and OCR output.
 
@@ -2278,7 +2359,8 @@ Automatically detect and filter out sensitive or personal information from crawl
 ## Suggested Labels
 phase-3, compliance, privacy, redaction, datasets, community-compute
 
-Issue 94 — Phase 3: Implement Opportunity Expansion (Generate Applicant-Facing Summaries)
+
+## Issue 94 — Phase 3: Implement Opportunity Expansion (Generate Applicant-Facing Summaries)
 ## Summary
 Generate extended, applicant-friendly summaries highlighting purpose, eligibility, funding structure, and key requirements in plain language.
 
@@ -2304,7 +2386,8 @@ Generate extended, applicant-friendly summaries highlighting purpose, eligibilit
 ## Suggested Labels
 phase-3, summarization, nlp, user-experience, community-compute
 
-Issue 95 — Phase 3: Implement Advanced Eligibility Matching (Applicant Profiles → Opportunities)
+
+## Issue 95 — Phase 3: Implement Advanced Eligibility Matching (Applicant Profiles → Opportunities)
 ## Summary
 Match opportunities to applicant profiles by analyzing eligibility, sector, region, and funding needs.
 
@@ -2330,7 +2413,8 @@ Match opportunities to applicant profiles by analyzing eligibility, sector, regi
 ## Suggested Labels
 phase-3, matching, analytics, eligibility, community-compute
 
-Issue 96 — Phase 3: Implement Data Integrity Monitoring & Drift Detection
+
+## Issue 96 — Phase 3: Implement Data Integrity Monitoring & Drift Detection
 ## Summary
 Monitor extraction accuracy, classifier performance, and structural consistency over time to detect drift or degradation.
 
@@ -2356,7 +2440,8 @@ Monitor extraction accuracy, classifier performance, and structural consistency 
 ## Suggested Labels
 phase-3, monitoring, drift-detection, analytics, quality, community-compute
 
-Issue 97 — Phase 3: Implement Distributed Opportunity Standardization (Schema Harmonizer)
+
+## Issue 97 — Phase 3: Implement Distributed Opportunity Standardization (Schema Harmonizer)
 ## Summary
 Ensure every opportunity conforms to a unified schema by standardizing field names, formats, and data structures across all extracted sources.
 
@@ -2382,7 +2467,8 @@ Ensure every opportunity conforms to a unified schema by standardizing field nam
 ## Suggested Labels
 phase-3, normalization, schema, datasets, community-compute
 
-Issue 98 — Phase 3: Implement Opportunity Cross-Domain Insights (Meta-Analytics Engine)
+
+## Issue 98 — Phase 3: Implement Opportunity Cross-Domain Insights (Meta-Analytics Engine)
 ## Summary
 Compute analytics across sectors, regions, award sizes, and eligibility to uncover insights and macro trends in grantmaking.
 
@@ -2408,7 +2494,8 @@ Compute analytics across sectors, regions, award sizes, and eligibility to uncov
 ## Suggested Labels
 phase-3, analytics, reporting, datasets, community-compute
 
-Issue 99 — Phase 3: Implement Distributed Field Repair via ML-Based Imputation
+
+## Issue 99 — Phase 3: Implement Distributed Field Repair via ML-Based Imputation
 ## Summary
 Use machine learning models to predict missing or ambiguous opportunity fields (e.g., sector, eligibility, award amounts, region).
 
@@ -2434,7 +2521,7 @@ Use machine learning models to predict missing or ambiguous opportunity fields (
 ## Suggested Labels
 phase-3, imputation, ml, data-repair, datasets, community-compute
 
-Issue 100 — Phase 3: Implement Multi-Stage Opportunity Ranking Pipeline
+## Issue 100 — Phase 3: Implement Multi-Stage Opportunity Ranking Pipeline
 ## Summary
 Combine relevance, eligibility, quality, urgency, demand, and difficulty into a multi-stage ranking pipeline to power search and recommendations.
 
@@ -2460,7 +2547,8 @@ Combine relevance, eligibility, quality, urgency, demand, and difficulty into a 
 ## Suggested Labels
 phase-3, ranking, analytics, scoring, datasets, community-compute
 
-Issue 101 — Phase 3: Implement Opportunity Stability Index (Volatility Score)
+
+## Issue 101 — Phase 3: Implement Opportunity Stability Index (Volatility Score)
 ## Summary
 Measure how stable or volatile each opportunity is over time based on changes to deadlines, award amounts, description content, and updates.
 
@@ -2486,7 +2574,8 @@ Measure how stable or volatile each opportunity is over time based on changes to
 ## Suggested Labels
 phase-3, analytics, volatility, scoring, datasets, community-compute
 
-Issue 102 — Phase 3: Implement Distributed Opportunity Embedding Refresh Pipeline
+
+## Issue 102 — Phase 3: Implement Distributed Opportunity Embedding Refresh Pipeline
 ## Summary
 Automatically refresh vector embeddings when extraction models, taxonomies, or schema updates occur to ensure semantic search accuracy.
 
@@ -2512,7 +2601,8 @@ Automatically refresh vector embeddings when extraction models, taxonomies, or s
 ## Suggested Labels
 phase-3, embeddings, semantic-search, maintenance, community-compute
 
-Issue 103 — Phase 3: Implement Opportunity Structural Integrity Validator
+
+## Issue 103 — Phase 3: Implement Opportunity Structural Integrity Validator
 ## Summary
 Validate the internal structural consistency of opportunity objects, ensuring all required sections (overview, eligibility, deadlines) are logically sound.
 
@@ -2538,7 +2628,8 @@ Validate the internal structural consistency of opportunity objects, ensuring al
 ## Suggested Labels
 phase-3, validation, structure, quality, datasets, community-compute
 
-Issue 104 — Phase 3: Implement Grant Opportunity Metric Aggregator (Sector, Region, Funder)
+
+## Issue 104 — Phase 3: Implement Grant Opportunity Metric Aggregator (Sector, Region, Funder)
 ## Summary
 Aggregate metrics such as average award size, opportunity frequency, and deadline patterns at the sector, region, and funder levels.
 
@@ -2564,7 +2655,8 @@ Aggregate metrics such as average award size, opportunity frequency, and deadlin
 ## Suggested Labels
 phase-3, analytics, aggregation, reporting, datasets, community-compute
 
-Issue 105 — Phase 3: Implement Data Confidence Decay Modeling (Aging Factor)
+
+## Issue 105 — Phase 3: Implement Data Confidence Decay Modeling (Aging Factor)
 ## Summary
 Model how confidence in extracted data decays over time based on last crawl, update frequency, and source reliability.
 
@@ -2590,7 +2682,8 @@ Model how confidence in extracted data decays over time based on last crawl, upd
 ## Suggested Labels
 phase-3, freshness, decay, scoring, datasets, community-compute
 
-Issue 106 — Phase 3: Implement Opportunity Multi-Source Consistency Checker
+
+## Issue 106 — Phase 3: Implement Opportunity Multi-Source Consistency Checker
 ## Summary
 Compare opportunity fields across different portals and sources to detect inconsistencies and anomalies.
 
@@ -2616,7 +2709,8 @@ Compare opportunity fields across different portals and sources to detect incons
 ## Suggested Labels
 phase-3, consistency, validation, datasets, community-compute
 
-Issue 107 — Phase 3: Implement Distributed Grant Opportunity Benchmarking (Peer Comparison)
+
+## Issue 107 — Phase 3: Implement Distributed Grant Opportunity Benchmarking (Peer Comparison)
 ## Summary
 Compare each opportunity against similar grants to generate benchmarking insights, such as typical award sizes, eligibility norms, and sector averages.
 
@@ -2642,7 +2736,8 @@ Compare each opportunity against similar grants to generate benchmarking insight
 ## Suggested Labels
 phase-3, benchmarking, analytics, similarity, datasets, community-compute
 
-Issue 108 — Phase 3: Implement Grant Opportunity Normalized Difficulty Profile
+
+## Issue 108 — Phase 3: Implement Grant Opportunity Normalized Difficulty Profile
 ## Summary
 Compute a difficulty profile that breaks down the effort required to apply for an opportunity by parsing attachments, compliance rules, and application steps.
 
@@ -2668,7 +2763,8 @@ Compute a difficulty profile that breaks down the effort required to apply for a
 ## Suggested Labels
 phase-3, scoring, difficulty, analytics, datasets, community-compute
 
-Issue 109 — Phase 3: Implement Regulatory Signals Extraction (Policy, Compliance, Federal Priority)
+
+## Issue 109 — Phase 3: Implement Regulatory Signals Extraction (Policy, Compliance, Federal Priority)
 ## Summary
 Extract references to federal or state policy initiatives, compliance frameworks, or priority areas mentioned in opportunities.
 
@@ -2694,7 +2790,8 @@ Extract references to federal or state policy initiatives, compliance frameworks
 ## Suggested Labels
 phase-3, policy, extraction, compliance, datasets, community-compute
 
-Issue 110 — Phase 3: Implement Multi-Field Opportunity Similarity (Hybrid Scoring)
+
+## Issue 110 — Phase 3: Implement Multi-Field Opportunity Similarity (Hybrid Scoring)
 ## Summary
 Enhance semantic similarity by combining embeddings with structured field comparisons (sector, eligibility, funding, region).
 
@@ -2720,7 +2817,7 @@ Enhance semantic similarity by combining embeddings with structured field compar
 ## Suggested Labels
 phase-3, similarity, recommendations, analytics, datasets, community-compute
 
-Issue 111 — Phase 3: Implement Opportunity Semantic Segment Tagging (Fine-Grained Labels)
+## Issue 111 — Phase 3: Implement Opportunity Semantic Segment Tagging (Fine-Grained Labels)
 ## Summary
 Tag specific sections of opportunity text (e.g., eligibility, funding, narrative requirements) using sentence-level or paragraph-level models.
 
@@ -2746,7 +2843,8 @@ Tag specific sections of opportunity text (e.g., eligibility, funding, narrative
 ## Suggested Labels
 phase-3, segmentation, nlp, tagging, datasets, community-compute
 
-Issue 112 — Phase 3: Implement Distributed Data Freshness Re-Crawling Scheduler
+
+## Issue 112 — Phase 3: Implement Distributed Data Freshness Re-Crawling Scheduler
 ## Summary
 Automatically schedule re-crawling of opportunities based on freshness decay, volatility, and update likelihood to maintain up-to-date records.
 
@@ -2772,7 +2870,8 @@ Automatically schedule re-crawling of opportunities based on freshness decay, vo
 ## Suggested Labels
 phase-3, crawling, scheduling, freshness, community-compute
 
-Issue 113 — Phase 3: Implement Narrative Requirement Extraction (Application Instructions)
+
+## Issue 113 — Phase 3: Implement Narrative Requirement Extraction (Application Instructions)
 ## Summary
 Extract narrative requirements such as application questions, proposal narrative sections, budget justifications, and formatting rules.
 
@@ -2798,7 +2897,8 @@ Extract narrative requirements such as application questions, proposal narrative
 ## Suggested Labels
 phase-3, extraction, nlp, requirements, datasets, community-compute
 
-Issue 114 — Phase 3: Implement Grant Opportunity Scoring Explanation Engine
+
+## Issue 114 — Phase 3: Implement Grant Opportunity Scoring Explanation Engine
 ## Summary
 Generate human-readable explanations describing why an opportunity received specific scores (difficulty, relevance, risk, urgency).
 
@@ -2824,7 +2924,8 @@ Generate human-readable explanations describing why an opportunity received spec
 ## Suggested Labels
 phase-3, scoring, explainability, analytics, community-compute
 
-Issue 115 — Phase 3: Implement Community Compute Result Validation (Cross-Node Consistency)
+
+## Issue 115 — Phase 3: Implement Community Compute Result Validation (Cross-Node Consistency)
 ## Summary
 Validate CC node outputs by comparing results across multiple nodes to detect faulty or unreliable compute results.
 
@@ -2850,7 +2951,8 @@ Validate CC node outputs by comparing results across multiple nodes to detect fa
 ## Suggested Labels
 phase-3, validation, distributed-systems, community-compute, reliability
 
-Issue 116 — Phase 3: Implement Multi-Stage Grant Opportunity Pipeline Visualization
+
+## Issue 116 — Phase 3: Implement Multi-Stage Grant Opportunity Pipeline Visualization
 ## Summary
 Provide a visual representation of the full opportunity processing pipeline, showing extraction, scoring, cleaning, merging, and CC stages.
 
@@ -2876,7 +2978,8 @@ Provide a visual representation of the full opportunity processing pipeline, sho
 ## Suggested Labels
 phase-3, visualization, analytics, pipeline, community-compute
 
-Issue 117 — Phase 3: Implement Distributed Opportunity Error Classification (Failure Modes)
+
+## Issue 117 — Phase 3: Implement Distributed Opportunity Error Classification (Failure Modes)
 ## Summary
 Identify and classify extraction, parsing, OCR, and processing failures across the distributed pipeline to understand systemic issues and improve reliability.
 
@@ -2902,7 +3005,8 @@ Identify and classify extraction, parsing, OCR, and processing failures across t
 ## Suggested Labels
 phase-3, errors, diagnostics, monitoring, community-compute
 
-Issue 118 — Phase 3: Implement Grant Opportunity Time-to-Apply Estimation
+
+## Issue 118 — Phase 3: Implement Grant Opportunity Time-to-Apply Estimation
 ## Summary
 Estimate the total time required for an applicant to prepare a high-quality application based on complexity, requirements, attachments, and narrative demands.
 
@@ -2928,7 +3032,8 @@ Estimate the total time required for an applicant to prepare a high-quality appl
 ## Suggested Labels
 phase-3, estimation, scoring, analytics, community-compute
 
-Issue 119 — Phase 3: Implement Grant Opportunity Compliance Risk Detection (Red Flags)
+
+## Issue 119 — Phase 3: Implement Grant Opportunity Compliance Risk Detection (Red Flags)
 ## Summary
 Detect potential compliance risks such as contradictory eligibility statements, inconsistent dates, unclear budget rules, or missing funder information.
 
@@ -2954,7 +3059,8 @@ Detect potential compliance risks such as contradictory eligibility statements, 
 ## Suggested Labels
 phase-3, compliance, risk, validation, community-compute
 
-Issue 120 — Phase 3: Implement Opportunity Update Impact Scoring
+
+## Issue 120 — Phase 3: Implement Opportunity Update Impact Scoring
 ## Summary
 Score updates to opportunities based on their significance (e.g., new deadlines, funding changes, eligibility shifts) to prioritize applicant notifications.
 
@@ -2980,7 +3086,7 @@ Score updates to opportunities based on their significance (e.g., new deadlines,
 ## Suggested Labels
 phase-3, updates, scoring, analytics, community-compute
 
-Issue 121 — Phase 3: Implement Opportunity Multi-Vector Ranking (Hybrid Model Integration)
+## Issue 121 — Phase 3: Implement Opportunity Multi-Vector Ranking (Hybrid Model Integration)
 ## Summary
 Integrate all ranking signals (semantic, structural, eligibility, difficulty, demand, volatility, recency) into a unified multi-vector ranking system.
 
@@ -3006,7 +3112,8 @@ Integrate all ranking signals (semantic, structural, eligibility, difficulty, de
 ## Suggested Labels
 phase-3, ranking, analytics, scoring, community-compute
 
-Issue 122 — Phase 3: Implement Distributed Opportunity Priority Scoring (Applicant Fit)
+
+## Issue 122 — Phase 3: Implement Distributed Opportunity Priority Scoring (Applicant Fit)
 ## Summary
 Generate a “priority score” ranking how well an opportunity aligns with a specific applicant’s mission, region, size, and program area.
 
@@ -3032,7 +3139,8 @@ Generate a “priority score” ranking how well an opportunity aligns with a sp
 ## Suggested Labels
 phase-3, scoring, matching, analytics, community-compute
 
-Issue 123 — Phase 3: Implement Funding Opportunity Lifecycle Prediction (Forecasting)
+
+## Issue 123 — Phase 3: Implement Funding Opportunity Lifecycle Prediction (Forecasting)
 ## Summary
 Predict when new opportunities are likely to open, repeat, or close based on historical cycles, sector behavior, and agency trends.
 
@@ -3058,7 +3166,8 @@ Predict when new opportunities are likely to open, repeat, or close based on his
 ## Suggested Labels
 phase-3, forecasting, analytics, trends, community-compute
 
-Issue 124 — Phase 3: Implement Cross-Language Opportunity Semantic Normalization
+
+## Issue 124 — Phase 3: Implement Cross-Language Opportunity Semantic Normalization
 ## Summary
 Normalize multilingual opportunities so that embeddings, tags, summaries, and classification outputs are comparable across languages.
 
@@ -3084,7 +3193,8 @@ Normalize multilingual opportunities so that embeddings, tags, summaries, and cl
 ## Suggested Labels
 phase-3, multilingual, normalization, nlp, community-compute
 
-Issue 125 — Phase 3: Implement Advanced Attachment Classification (Forms, Guides, Budgets)
+
+## Issue 125 — Phase 3: Implement Advanced Attachment Classification (Forms, Guides, Budgets)
 ## Summary
 Classify grant attachments into fine-grained categories such as application templates, budget sheets, scoring rubrics, informational guides, and compliance forms.
 
@@ -3110,7 +3220,8 @@ Classify grant attachments into fine-grained categories such as application temp
 ## Suggested Labels
 phase-3, attachments, classification, ocr, datasets, community-compute
 
-Issue 126 — Phase 3: Implement Program-Level Analytics (Historical Funding, Award Frequency)
+
+## Issue 126 — Phase 3: Implement Program-Level Analytics (Historical Funding, Award Frequency)
 ## Summary
 Compute analytics at the program level such as total historical funding, average award size, number of cycles, and success rates.
 
@@ -3136,7 +3247,8 @@ Compute analytics at the program level such as total historical funding, average
 ## Suggested Labels
 phase-3, analytics, programs, funding, community-compute
 
-Issue 127 — Phase 3: Implement Opportunity Policy Alignment Index (Administrative Priorities)
+
+## Issue 127 — Phase 3: Implement Opportunity Policy Alignment Index (Administrative Priorities)
 ## Summary
 Score opportunities based on their alignment with major federal, state, and institutional policy priorities (climate, equity, innovation, rural development).
 
@@ -3162,7 +3274,8 @@ Score opportunities based on their alignment with major federal, state, and inst
 ## Suggested Labels
 phase-3, policy, scoring, nlp, datasets, community-compute
 
-Issue 128 — Phase 3: Implement Multi-Level Geographic Eligibility Modeling (Local → State → Federal)
+
+## Issue 128 — Phase 3: Implement Multi-Level Geographic Eligibility Modeling (Local → State → Federal)
 ## Summary
 Model geographic eligibility across multiple jurisdiction levels, enabling precision filtering for applicants in specific counties, states, or national regions.
 
@@ -3188,7 +3301,8 @@ Model geographic eligibility across multiple jurisdiction levels, enabling preci
 ## Suggested Labels
 phase-3, geography, eligibility, normalization, datasets, community-compute
 
-Issue 129 — Phase 3: Implement Opportunity Accessibility Extraction (ADA, Language Access, PDF Quality)
+
+## Issue 129 — Phase 3: Implement Opportunity Accessibility Extraction (ADA, Language Access, PDF Quality)
 ## Summary
 Detect accessibility indicators such as ADA compliance statements, multilingual access provisions, and PDF accessibility attributes.
 
@@ -3214,7 +3328,8 @@ Detect accessibility indicators such as ADA compliance statements, multilingual 
 ## Suggested Labels
 phase-3, accessibility, extraction, compliance, datasets, community-compute
 
-Issue 130 — Phase 3: Implement Grant Opportunity Confidence Calibration (Model Probability Tuning)
+
+## Issue 130 — Phase 3: Implement Grant Opportunity Confidence Calibration (Model Probability Tuning)
 ## Summary
 Calibrate all model outputs (classification, extraction, scoring) to ensure probability values are reliable and comparable across models.
 
@@ -3240,7 +3355,8 @@ Calibrate all model outputs (classification, extraction, scoring) to ensure prob
 ## Suggested Labels
 phase-3, calibration, scoring, reliability, community-compute
 
-Issue 131 — Phase 3: Implement Distributed Annotation Pipeline (Human-in-the-Loop Review)
+
+## Issue 131 — Phase 3: Implement Distributed Annotation Pipeline (Human-in-the-Loop Review)
 ## Summary
 Enable structured human review of flagged opportunities (low confidence, inconsistencies, errors) and ingest reviewer corrections back into the dataset.
 
@@ -3266,7 +3382,7 @@ Enable structured human review of flagged opportunities (low confidence, inconsi
 ## Suggested Labels
 phase-3, annotation, quality, workflow, community-compute
 
-Issue 132 — Phase 3: Implement Grant Opportunity Structural Summarization (Section-Level Summaries)
+## Issue 132 — Phase 3: Implement Grant Opportunity Structural Summarization (Section-Level Summaries)
 ## Summary
 Generate summaries for individual opportunity sections such as eligibility, funding, deadlines, and narrative requirements to support granular UI components.
 
@@ -3292,7 +3408,8 @@ Generate summaries for individual opportunity sections such as eligibility, fund
 ## Suggested Labels
 phase-3, summarization, segmentation, nlp, community-compute
 
-Issue 133 — Phase 3: Implement Distributed Opportunity Redundancy Filter (Noise Reduction)
+
+## Issue 133 — Phase 3: Implement Distributed Opportunity Redundancy Filter (Noise Reduction)
 ## Summary
 Detect and remove redundant extracted content such as repeated paragraphs, duplicated OCR blocks, or boilerplate text.
 
@@ -3318,7 +3435,8 @@ Detect and remove redundant extracted content such as repeated paragraphs, dupli
 ## Suggested Labels
 phase-3, cleaning, normalization, ocr, community-compute
 
-Issue 134 — Phase 3: Implement Funder Communication Channel Extraction (Emails, Portals, Systems)
+
+## Issue 134 — Phase 3: Implement Funder Communication Channel Extraction (Emails, Portals, Systems)
 ## Summary
 Extract communication and submission channel details such as required portals, email submission pathways, or application management systems.
 
@@ -3344,7 +3462,8 @@ Extract communication and submission channel details such as required portals, e
 ## Suggested Labels
 phase-3, extraction, submission, metadata, community-compute
 
-Issue 135 — Phase 3: Implement Opportunity Scoring Drift Correction (Feedback Loop Integration)
+
+## Issue 135 — Phase 3: Implement Opportunity Scoring Drift Correction (Feedback Loop Integration)
 ## Summary
 Correct scoring drift by integrating human feedback, usage data, and field updates to continually improve ranking and scoring accuracy.
 
@@ -3370,7 +3489,8 @@ Correct scoring drift by integrating human feedback, usage data, and field updat
 ## Suggested Labels
 phase-3, scoring, drift-correction, ranking, community-compute
 
-Issue 136 — Phase 3: Implement Cross-Opportunity Dependency Detection (Grants Requiring Prerequisites)
+
+## Issue 136 — Phase 3: Implement Cross-Opportunity Dependency Detection (Grants Requiring Prerequisites)
 ## Summary
 Identify opportunities that require prior awards, pre-application approvals, or eligibility prerequisites dependent on other grants.
 
@@ -3396,7 +3516,8 @@ Identify opportunities that require prior awards, pre-application approvals, or 
 ## Suggested Labels
 phase-3, dependencies, graph, eligibility, community-compute
 
-Issue 137 — Phase 3: Implement Distributed Multi-Modal Opportunity Summary (Text + Attachments)
+
+## Issue 137 — Phase 3: Implement Distributed Multi-Modal Opportunity Summary (Text + Attachments)
 ## Summary
 Generate a unified opportunity summary that includes insights extracted from both the main text and all attached documents.
 
@@ -3422,7 +3543,8 @@ Generate a unified opportunity summary that includes insights extracted from bot
 ## Suggested Labels
 phase-3, summarization, multimodal, nlp, community-compute
 
-Issue 138 — Phase 3: Implement Opportunity Ambiguity Detection (Unclear or Contradictory Information)
+
+## Issue 138 — Phase 3: Implement Opportunity Ambiguity Detection (Unclear or Contradictory Information)
 ## Summary
 Detect ambiguous, unclear, or conflicting statements within an opportunity (e.g., inconsistent deadlines, contradictory eligibility criteria).
 
@@ -3448,7 +3570,8 @@ Detect ambiguous, unclear, or conflicting statements within an opportunity (e.g.
 ## Suggested Labels
 phase-3, ambiguity, validation, nlp, community-compute
 
-Issue 139 — Phase 3: Implement Funder Relationship Graph (Programs, Agencies, Sub-Agencies)
+
+## Issue 139 — Phase 3: Implement Funder Relationship Graph (Programs, Agencies, Sub-Agencies)
 ## Summary
 Construct a graph showing relationships among agencies, sub-agencies, program offices, and recurring grant lines.
 
@@ -3474,7 +3597,8 @@ Construct a graph showing relationships among agencies, sub-agencies, program of
 ## Suggested Labels
 phase-3, graph, funders, metadata, community-compute
 
-Issue 140 — Phase 3: Implement Opportunity “Reviewer Burden” Estimation (Application Difficulty)
+
+## Issue 140 — Phase 3: Implement Opportunity “Reviewer Burden” Estimation (Application Difficulty)
 ## Summary
 Estimate the administrative burden required to review an application, giving applicants insight into competitiveness and complexity.
 
@@ -3500,7 +3624,8 @@ Estimate the administrative burden required to review an application, giving app
 ## Suggested Labels
 phase-3, scoring, analytics, difficulty, community-compute
 
-Issue 141 — Phase 3: Implement Opportunity Cost-Benefit Index (Funding Amount vs Preparation Burden)
+
+## Issue 141 — Phase 3: Implement Opportunity Cost-Benefit Index (Funding Amount vs Preparation Burden)
 ## Summary
 Compute a cost-benefit score weighing expected funding amount against application difficulty, complexity, and time-to-apply.
 
@@ -3526,7 +3651,8 @@ Compute a cost-benefit score weighing expected funding amount against applicatio
 ## Suggested Labels
 phase-3, scoring, analytics, value, community-compute
 
-Issue 142 — Phase 3: Implement Distributed Narrative Complexity Scoring
+
+## Issue 142 — Phase 3: Implement Distributed Narrative Complexity Scoring
 ## Summary
 Calculate a complexity score for the narrative requirements of each opportunity, factoring in length, depth, required structure, and technical difficulty.
 
@@ -3552,7 +3678,8 @@ Calculate a complexity score for the narrative requirements of each opportunity,
 ## Suggested Labels
 phase-3, narrative, scoring, analytics, community-compute
 
-Issue 143 — Phase 3: Implement Opportunity “Readability Normalization” (Plain-Language Conversion)
+
+## Issue 143 — Phase 3: Implement Opportunity “Readability Normalization” (Plain-Language Conversion)
 ## Summary
 Convert overly technical or bureaucratic opportunity language into clearer, plain-language summaries to assist diverse applicants.
 
@@ -3578,7 +3705,8 @@ Convert overly technical or bureaucratic opportunity language into clearer, plai
 ## Suggested Labels
 phase-3, readability, nlp, summarization, community-compute
 
-Issue 144 — Phase 3: Implement Distributed Sector & Theme Expansion (Multi-Label Refinement)
+
+## Issue 144 — Phase 3: Implement Distributed Sector & Theme Expansion (Multi-Label Refinement)
 ## Summary
 Improve sector and theme tagging by allowing opportunities to have multiple refined labels and expanding the taxonomy via NLP clustering.
 
@@ -3604,7 +3732,8 @@ Improve sector and theme tagging by allowing opportunities to have multiple refi
 ## Suggested Labels
 phase-3, tagging, classification, taxonomy, community-compute
 
-Issue 145 — Phase 3: Implement Eligibility Ambiguity Resolver (Rule-Based + LLM Hybrid)
+
+## Issue 145 — Phase 3: Implement Eligibility Ambiguity Resolver (Rule-Based + LLM Hybrid)
 ## Summary
 Resolve ambiguous or unclear eligibility statements using rule-based reasoning combined with LLM-powered contextual interpretation.
 
@@ -3630,7 +3759,8 @@ Resolve ambiguous or unclear eligibility statements using rule-based reasoning c
 ## Suggested Labels
 phase-3, eligibility, nlp, reasoning, community-compute
 
-Issue 146 — Phase 3: Implement Distributed Program Lineage Tracking (Grant Line Evolution)
+
+## Issue 146 — Phase 3: Implement Distributed Program Lineage Tracking (Grant Line Evolution)
 ## Summary
 Track the evolution of grant programs over time, identifying earlier or later versions, renamed programs, and structural lineage.
 
@@ -3656,7 +3786,8 @@ Track the evolution of grant programs over time, identifying earlier or later ve
 ## Suggested Labels
 phase-3, lineage, history, graph, community-compute
 
-Issue 147 — Phase 3: Implement Funder Stability & Reliability Scoring
+
+## Issue 147 — Phase 3: Implement Funder Stability & Reliability Scoring
 ## Summary
 Score funders based on historical consistency, frequency of opportunity releases, administrative stability, and clarity of published requirements.
 
@@ -3682,7 +3813,8 @@ Score funders based on historical consistency, frequency of opportunity releases
 ## Suggested Labels
 phase-3, funders, scoring, analytics, community-compute
 
-Issue 148 — Phase 3: Implement Distributed Fraud & Anomaly Detection for Opportunities
+
+## Issue 148 — Phase 3: Implement Distributed Fraud & Anomaly Detection for Opportunities
 ## Summary
 Detect suspicious or low-quality grant listings, including misleading descriptions, broken links, unverifiable funders, or unrealistic funding claims.
 
@@ -3708,7 +3840,7 @@ Detect suspicious or low-quality grant listings, including misleading descriptio
 ## Suggested Labels
 phase-3, anomaly, fraud-detection, quality, community-compute
 
-Issue 149 — Phase 3: Implement Opportunity Durability Scoring (Long-Term Funding Reliability)
+## Issue 149 — Phase 3: Implement Opportunity Durability Scoring (Long-Term Funding Reliability)
 ## Summary
 Score opportunities on long-term durability, considering program lifespan, funding predictability, and multi-year commitments.
 
@@ -3734,7 +3866,8 @@ Score opportunities on long-term durability, considering program lifespan, fundi
 ## Suggested Labels
 phase-3, scoring, forecasting, analytics, community-compute
 
-Issue 150 — Phase 3: Implement Grant Opportunity “Surface Area” Measurement (Information Density)
+
+## Issue 150 — Phase 3: Implement Grant Opportunity “Surface Area” Measurement (Information Density)
 ## Summary
 Calculate the informational “surface area” of an opportunity by measuring length, number of sections, number of attachments, and depth of requirements.
 
@@ -3760,7 +3893,8 @@ Calculate the informational “surface area” of an opportunity by measuring le
 ## Suggested Labels
 phase-3, analytics, scoring, structure, community-compute
 
-Issue 151 — Phase 3: Implement Cross-Document Consistency Checking (Text vs Attachments)
+
+## Issue 151 — Phase 3: Implement Cross-Document Consistency Checking (Text vs Attachments)
 ## Summary
 Verify that information extracted from attachments matches or enhances the main opportunity text, flagging inconsistencies or missing details.
 
@@ -3786,7 +3920,8 @@ Verify that information extracted from attachments matches or enhances the main 
 ## Suggested Labels
 phase-3, validation, consistency, attachments, community-compute
 
-Issue 152 — Phase 3: Implement Distributed Content Confidence Ranking (Field-Level Reliability)
+
+## Issue 152 — Phase 3: Implement Distributed Content Confidence Ranking (Field-Level Reliability)
 ## Summary
 Assign confidence scores to each extracted field (funding amount, eligibility, deadlines, etc.) based on extraction quality, OCR clarity, and cross-source agreement.
 
@@ -3812,7 +3947,8 @@ Assign confidence scores to each extracted field (funding amount, eligibility, d
 ## Suggested Labels
 phase-3, confidence, scoring, validation, community-compute
 
-Issue 153 — Phase 3: Implement Distributed Metadata Gap Detection (Missing Critical Fields)
+
+## Issue 153 — Phase 3: Implement Distributed Metadata Gap Detection (Missing Critical Fields)
 ## Summary
 Automatically detect when critical metadata fields are missing (e.g., deadlines, funding amount, required attachments) and trigger corrective actions.
 
@@ -3838,7 +3974,8 @@ Automatically detect when critical metadata fields are missing (e.g., deadlines,
 ## Suggested Labels
 phase-3, metadata, validation, quality, community-compute
 
-Issue 154 — Phase 3: Implement Funder Behavior Forecasting (Trend Detection)
+
+## Issue 154 — Phase 3: Implement Funder Behavior Forecasting (Trend Detection)
 ## Summary
 Predict future shifts in funder behavior, such as increases or decreases in available funding, sector focus changes, or timing shifts in opportunity cycles.
 
@@ -3864,7 +4001,8 @@ Predict future shifts in funder behavior, such as increases or decreases in avai
 ## Suggested Labels
 phase-3, forecasting, analytics, funders, community-compute
 
-Issue 155 — Phase 3: Implement Opportunity Economic Impact Scoring (Benefit Modeling)
+
+## Issue 155 — Phase 3: Implement Opportunity Economic Impact Scoring (Benefit Modeling)
 ## Summary
 Estimate potential economic and community impact of an opportunity based on funding scale, target demographics, and sector multipliers.
 
@@ -3890,7 +4028,8 @@ Estimate potential economic and community impact of an opportunity based on fund
 ## Suggested Labels
 phase-3, impact, scoring, analytics, community-compute
 
-Issue 156 — Phase 3: Implement Category Drift Detection (Sector Reclassification Over Time)
+
+## Issue 156 — Phase 3: Implement Category Drift Detection (Sector Reclassification Over Time)
 ## Summary
 Detect when opportunities or funders drift into new categories due to thematic or programmatic changes, prompting taxonomy updates.
 
@@ -3916,7 +4055,8 @@ Detect when opportunities or funders drift into new categories due to thematic o
 ## Suggested Labels
 phase-3, taxonomy, drift-detection, classification, community-compute
 
-Issue 157 — Phase 3: Implement Distributed Opportunity Risk Index (Operational & Administrative Risk)
+
+## Issue 157 — Phase 3: Implement Distributed Opportunity Risk Index (Operational & Administrative Risk)
 ## Summary
 Compute a composite “risk index” indicating administrative, operational, or structural uncertainty in an opportunity, helping applicants identify unstable or high-risk grants.
 
@@ -3942,7 +4082,8 @@ Compute a composite “risk index” indicating administrative, operational, or 
 ## Suggested Labels
 phase-3, risk, scoring, analytics, community-compute
 
-Issue 158 — Phase 3: Implement Regional Demand Modeling (Applicant Competition Forecast)
+
+## Issue 158 — Phase 3: Implement Regional Demand Modeling (Applicant Competition Forecast)
 ## Summary
 Forecast expected competition level for each opportunity based on regional demand, applicant density, sector popularity, and funding availability.
 
@@ -3968,7 +4109,8 @@ Forecast expected competition level for each opportunity based on regional deman
 ## Suggested Labels
 phase-3, forecasting, competition, analytics, community-compute
 
-Issue 159 — Phase 3: Implement Document Structure Reconstruction (Headings, Sections, Hierarchy)
+
+## Issue 159 — Phase 3: Implement Document Structure Reconstruction (Headings, Sections, Hierarchy)
 ## Summary
 Reconstruct hierarchical structure of poorly formatted PDFs or HTML to restore sections, headings, bullet lists, and nested structures for better extraction.
 
@@ -3994,7 +4136,8 @@ Reconstruct hierarchical structure of poorly formatted PDFs or HTML to restore s
 ## Suggested Labels
 phase-3, structure, ocr, normalization, community-compute
 
-Issue 160 — Phase 3: Implement Funding Allocation Pattern Mining (Award Distribution Insights)
+
+## Issue 160 — Phase 3: Implement Funding Allocation Pattern Mining (Award Distribution Insights)
 ## Summary
 Mine historical award distribution patterns to identify typical award sizes, regional distribution trends, and demographic patterns.
 
@@ -4020,7 +4163,8 @@ Mine historical award distribution patterns to identify typical award sizes, reg
 ## Suggested Labels
 phase-3, funding, analytics, clustering, community-compute
 
-Issue 161 — Phase 3: Implement Opportunity Completeness Scoring (Overall Quality Assessment)
+
+## Issue 161 — Phase 3: Implement Opportunity Completeness Scoring (Overall Quality Assessment)
 ## Summary
 Assign a completeness score to each opportunity based on presence, clarity, and confidence of required fields across text and attachments.
 
@@ -4046,7 +4190,8 @@ Assign a completeness score to each opportunity based on presence, clarity, and 
 ## Suggested Labels
 phase-3, quality, scoring, metadata, community-compute
 
-Issue 162 — Phase 3: Implement Distributed Application Barrier Detection (Hidden Complexity Signals)
+
+## Issue 162 — Phase 3: Implement Distributed Application Barrier Detection (Hidden Complexity Signals)
 ## Summary
 Identify “hidden barriers” that increase the difficulty of applying, such as mandatory registrations, eligibility pre-checks, SAM.gov requirements, or multi-step portal flows.
 
@@ -4072,7 +4217,8 @@ Identify “hidden barriers” that increase the difficulty of applying, such as
 ## Suggested Labels
 phase-3, difficulty, extraction, compliance, community-compute
 
-Issue 163 — Phase 3: Implement Opportunity Incentive Detection (Match Requirements, Bonuses, Preferences)
+
+## Issue 163 — Phase 3: Implement Opportunity Incentive Detection (Match Requirements, Bonuses, Preferences)
 ## Summary
 Detect special incentives or constraints such as matching fund requirements, bonus scoring criteria, geographic preferences, or priority populations.
 
@@ -4098,7 +4244,8 @@ Detect special incentives or constraints such as matching fund requirements, bon
 ## Suggested Labels
 phase-3, incentives, eligibility, scoring, community-compute
 
-Issue 164 — Phase 3: Implement Distributed Data Crosslinking (Related Opportunities & Successors)
+
+## Issue 164 — Phase 3: Implement Distributed Data Crosslinking (Related Opportunities & Successors)
 ## Summary
 Identify related opportunities—such as renewals, companion programs, or successor opportunities—and automatically link them for applicant discovery.
 
@@ -4124,7 +4271,7 @@ Identify related opportunities—such as renewals, companion programs, or succes
 ## Suggested Labels
 phase-3, relationships, graph, linking, community-compute
 
-Issue 165 — Phase 3: Implement Eligibility Exceptions & Overrides Extraction (Special Cases)
+## Issue 165 — Phase 3: Implement Eligibility Exceptions & Overrides Extraction (Special Cases)
 ## Summary
 Detect special exception rules, waivers, or overrides that modify standard eligibility (e.g., new organizations allowed, prior approval waivers).
 
@@ -4150,7 +4297,8 @@ Detect special exception rules, waivers, or overrides that modify standard eligi
 ## Suggested Labels
 phase-3, eligibility, extraction, exceptions, community-compute
 
-Issue 166 — Phase 3: Implement Distributed Grant “Pathway Analysis” (Multi-Step Funding Journeys)
+
+## Issue 166 — Phase 3: Implement Distributed Grant “Pathway Analysis” (Multi-Step Funding Journeys)
 ## Summary
 Analyze opportunities to identify multi-step pathways—such as planning → implementation → expansion grants—and map them into sequences.
 
@@ -4176,7 +4324,8 @@ Analyze opportunities to identify multi-step pathways—such as planning → imp
 ## Suggested Labels
 phase-3, pathways, lifecycle, analytics, community-compute
 
-Issue 167 — Phase 3: Implement Opportunity “Sector Intensity” Scoring (Depth of Sector-Specific Content)
+
+## Issue 167 — Phase 3: Implement Opportunity “Sector Intensity” Scoring (Depth of Sector-Specific Content)
 ## Summary
 Analyze how deeply an opportunity engages with its sector (e.g., climate, healthcare, education) to compute a sector intensity score.
 
@@ -4202,7 +4351,8 @@ Analyze how deeply an opportunity engages with its sector (e.g., climate, health
 ## Suggested Labels
 phase-3, sectors, scoring, analytics, community-compute
 
-Issue 168 — Phase 3: Implement Distributed Temporal Reasoning Engine (Extract Dates, Durations, Windows)
+
+## Issue 168 — Phase 3: Implement Distributed Temporal Reasoning Engine (Extract Dates, Durations, Windows)
 ## Summary
 Extract and normalize all temporal references—such as performance periods, award durations, reporting windows, and grant cycles.
 
@@ -4228,7 +4378,8 @@ Extract and normalize all temporal references—such as performance periods, awa
 ## Suggested Labels
 phase-3, temporal, extraction, lifecycle, community-compute
 
-Issue 169 — Phase 3: Implement “Application Strategy Advisor” Metadata (Automated Recommendations)
+
+## Issue 169 — Phase 3: Implement “Application Strategy Advisor” Metadata (Automated Recommendations)
 ## Summary
 Generate guidance metadata that informs applicants how to approach each opportunity based on complexity, risk, required materials, and likelihood of fit.
 
@@ -4254,7 +4405,8 @@ Generate guidance metadata that informs applicants how to approach each opportun
 ## Suggested Labels
 phase-3, recommendations, scoring, advisory, community-compute
 
-Issue 170 — Phase 3: Implement Distributed “Sector Overlap” Modeling (Multi-Sector Grants)
+
+## Issue 170 — Phase 3: Implement Distributed “Sector Overlap” Modeling (Multi-Sector Grants)
 ## Summary
 Identify opportunities that legitimately span multiple sectors and compute overlap weights to aid in search, ranking, and categorization.
 
@@ -4280,7 +4432,8 @@ Identify opportunities that legitimately span multiple sectors and compute overl
 ## Suggested Labels
 phase-3, sectors, classification, embeddings, community-compute
 
-Issue 171 — Phase 3: Implement Funding Opportunity Communication Tone Analysis (Formality, Urgency, Strictness)
+
+## Issue 171 — Phase 3: Implement Funding Opportunity Communication Tone Analysis (Formality, Urgency, Strictness)
 ## Summary
 Analyze the tone of opportunity language to determine strictness, urgency, positivity, and formality, supporting applicant guidance and risk scoring.
 
@@ -4306,7 +4459,8 @@ Analyze the tone of opportunity language to determine strictness, urgency, posit
 ## Suggested Labels
 phase-3, tone, classification, nlp, community-compute
 
-Issue 172 — Phase 3: Implement Distributed Opportunity “Resource Burden” Analysis (Staff, Equipment, Infrastructure)
+
+## Issue 172 — Phase 3: Implement Distributed Opportunity “Resource Burden” Analysis (Staff, Equipment, Infrastructure)
 ## Summary
 Identify requirements that imply significant organizational resources, such as staffing levels, equipment needs, infrastructure demands, or specialized capabilities.
 
@@ -4332,7 +4486,8 @@ Identify requirements that imply significant organizational resources, such as s
 ## Suggested Labels
 phase-3, resources, difficulty, extraction, community-compute
 
-Issue 173 — Phase 3: Implement Opportunity Engagement Signals (Web Mentions, Citations, External Activity)
+
+## Issue 173 — Phase 3: Implement Opportunity Engagement Signals (Web Mentions, Citations, External Activity)
 ## Summary
 Identify external signals of opportunity relevance or popularity, such as references on agency sites, community posts, newsletters, or external databases.
 
@@ -4358,7 +4513,8 @@ Identify external signals of opportunity relevance or popularity, such as refere
 ## Suggested Labels
 phase-3, engagement, analytics, public-data, community-compute
 
-Issue 174 — Phase 3: Implement Distributed Citation Extraction (References to Statutes, Codes, Regulations)
+
+## Issue 174 — Phase 3: Implement Distributed Citation Extraction (References to Statutes, Codes, Regulations)
 ## Summary
 Extract references to federal/state statutes, regulatory codes, and compliance frameworks cited within opportunity text or attachments.
 
@@ -4384,7 +4540,8 @@ Extract references to federal/state statutes, regulatory codes, and compliance f
 ## Suggested Labels
 phase-3, compliance, extraction, regulations, community-compute
 
-Issue 175 — Phase 3: Implement Opportunity “Implementation Feasibility Score”
+
+## Issue 175 — Phase 3: Implement Opportunity “Implementation Feasibility Score”
 ## Summary
 Compute how feasible it is for an average nonprofit or agency to implement the proposed grant work, considering complexity, resource needs, timeline, and regulatory barriers.
 
@@ -4410,7 +4567,8 @@ Compute how feasible it is for an average nonprofit or agency to implement the p
 ## Suggested Labels
 phase-3, feasibility, scoring, analytics, community-compute
 
-Issue 176 — Phase 3: Implement Cross-Sector Benchmarking (Compare Similar Opportunities)
+
+## Issue 176 — Phase 3: Implement Cross-Sector Benchmarking (Compare Similar Opportunities)
 ## Summary
 Automatically benchmark an opportunity against others in its sector to identify typical award sizes, deadlines, requirements, or competitiveness.
 
@@ -4436,7 +4594,8 @@ Automatically benchmark an opportunity against others in its sector to identify 
 ## Suggested Labels
 phase-3, benchmarking, analytics, clustering, community-compute
 
-Issue 177 — Phase 3: Implement Multi-Stage Opportunity Reliability Pipeline (Text + Attachments + Cross-Checks)
+
+## Issue 177 — Phase 3: Implement Multi-Stage Opportunity Reliability Pipeline (Text + Attachments + Cross-Checks)
 ## Summary
 Create a multi-stage validation pipeline ensuring that all extracted data—text, attachments, metadata, and derived fields—passes reliability checks before publication.
 
@@ -4462,7 +4621,8 @@ Create a multi-stage validation pipeline ensuring that all extracted data—text
 ## Suggested Labels
 phase-3, reliability, validation, quality, community-compute
 
-Issue 178 — Phase 3: Implement Funding Purpose Extraction (Program Goals & Intended Outcomes)
+
+## Issue 178 — Phase 3: Implement Funding Purpose Extraction (Program Goals & Intended Outcomes)
 ## Summary
 Extract statements describing the purpose of the grant, expected outcomes, and program goals to support applicant alignment.
 
@@ -4488,7 +4648,8 @@ Extract statements describing the purpose of the grant, expected outcomes, and p
 ## Suggested Labels
 phase-3, extraction, purpose, classification, community-compute
 
-Issue 179 — Phase 3: Implement Opportunity Eligibility Precision Scoring (Fine-Grained Eligibility Scoring)
+
+## Issue 179 — Phase 3: Implement Opportunity Eligibility Precision Scoring (Fine-Grained Eligibility Scoring)
 ## Summary
 Score the clarity, completeness, and specificity of eligibility criteria, allowing applicants to quickly evaluate relevance and risk.
 
@@ -4514,7 +4675,8 @@ Score the clarity, completeness, and specificity of eligibility criteria, allowi
 ## Suggested Labels
 phase-3, eligibility, scoring, analytics, community-compute
 
-Issue 180 — Phase 3: Implement Distributed Opportunity Confidence Aggregation (Holistic Confidence Index)
+
+## Issue 180 — Phase 3: Implement Distributed Opportunity Confidence Aggregation (Holistic Confidence Index)
 ## Summary
 Combine all field-level, extraction-level, and metadata-level confidence values into a single holistic confidence score for each opportunity.
 
@@ -4540,7 +4702,7 @@ Combine all field-level, extraction-level, and metadata-level confidence values 
 ## Suggested Labels
 phase-3, confidence, scoring, reliability, community-compute
 
-Issue 181 — Phase 3: Implement Distributed Grant Opportunity Multi-Document Fusion
+## Issue 181 — Phase 3: Implement Distributed Grant Opportunity Multi-Document Fusion
 ## Summary
 Combine extracted information from multiple related documents (main text + attachments + supplemental PDFs) into a unified canonical record.
 
@@ -4566,7 +4728,8 @@ Combine extracted information from multiple related documents (main text + attac
 ## Suggested Labels
 phase-3, fusion, documents, extraction, community-compute
 
-Issue 182 — Phase 3: Implement Opportunity “Administrative Load” Scoring (Reporting, Monitoring, Compliance)
+
+## Issue 182 — Phase 3: Implement Opportunity “Administrative Load” Scoring (Reporting, Monitoring, Compliance)
 ## Summary
 Score opportunities based on the administrative burden after award, including reporting frequency, monitoring requirements, auditing, and compliance obligations.
 
@@ -4592,7 +4755,8 @@ Score opportunities based on the administrative burden after award, including re
 ## Suggested Labels
 phase-3, compliance, scoring, analytics, community-compute
 
-Issue 183 — Phase 3: Implement Distributed “Missing Attachment Detection” (Expected But Not Provided)
+
+## Issue 183 — Phase 3: Implement Distributed “Missing Attachment Detection” (Expected But Not Provided)
 ## Summary
 Detect when required or commonly expected attachments are referenced but not included in the downloadable materials.
 
@@ -4618,7 +4782,8 @@ Detect when required or commonly expected attachments are referenced but not inc
 ## Suggested Labels
 phase-3, attachments, validation, completeness, community-compute
 
-Issue 184 — Phase 3: Implement Distributed Opportunity “Outcome Difficulty Score” (Project Execution Complexity)
+
+## Issue 184 — Phase 3: Implement Distributed Opportunity “Outcome Difficulty Score” (Project Execution Complexity)
 ## Summary
 Score opportunities based on the complexity and difficulty of achieving the required outcomes or project goals.
 
@@ -4644,7 +4809,8 @@ Score opportunities based on the complexity and difficulty of achieving the requ
 ## Suggested Labels
 phase-3, difficulty, scoring, analytics, community-compute
 
-Issue 185 — Phase 3: Implement Risk–Reward Optimization Index (Balancing Funding vs Risk)
+
+## Issue 185 — Phase 3: Implement Risk–Reward Optimization Index (Balancing Funding vs Risk)
 ## Summary
 Compute a combined “risk–reward index” that balances potential funding benefits against detected risks, difficulty, and feasibility.
 
@@ -4669,7 +4835,8 @@ Compute a combined “risk–reward index” that balances potential funding ben
 ## Suggested Labels
 phase-3, risk, scoring, analytics, community-compute
 
-Issue 186 — Phase 3: Implement Grant Opportunity “Program Fit Narrative Generator”
+
+## Issue 186 — Phase 3: Implement Grant Opportunity “Program Fit Narrative Generator”
 ## Summary
 Generate a natural-language narrative explaining how well an opportunity aligns with an applicant’s goals, mission, region, and capacity.
 
@@ -4695,7 +4862,8 @@ Generate a natural-language narrative explaining how well an opportunity aligns 
 ## Suggested Labels
 phase-3, narrative, recommendations, analytics, community-compute
 
-Issue 187 — Phase 3: Implement Distributed “Reviewer Guidance Extraction” (Evaluation Criteria)
+
+## Issue 187 — Phase 3: Implement Distributed “Reviewer Guidance Extraction” (Evaluation Criteria)
 ## Summary
 Extract reviewer evaluation criteria—such as scoring rubrics, weights, and qualitative expectations—to help applicants understand how proposals will be judged.
 
@@ -4721,7 +4889,8 @@ Extract reviewer evaluation criteria—such as scoring rubrics, weights, and qua
 ## Suggested Labels
 phase-3, extraction, evaluation, scoring, community-compute
 
-Issue 188 — Phase 3: Implement Opportunity “Timeline Reconstruction” (All Milestones + Dates)
+
+## Issue 188 — Phase 3: Implement Opportunity “Timeline Reconstruction” (All Milestones + Dates)
 ## Summary
 Reconstruct complete grant timelines by extracting all references to key dates, milestones, submission windows, and project phases.
 
@@ -4747,7 +4916,8 @@ Reconstruct complete grant timelines by extracting all references to key dates, 
 ## Suggested Labels
 phase-3, timeline, extraction, temporal, community-compute
 
-Issue 189 — Phase 3: Implement Distributed Budget Rule Extraction (Cost Share, Restrictions, Allowables)
+
+## Issue 189 — Phase 3: Implement Distributed Budget Rule Extraction (Cost Share, Restrictions, Allowables)
 ## Summary
 Extract detailed budget-related rules such as allowable costs, disallowed costs, match requirements, indirect cost rates, and funding restrictions.
 
@@ -4773,7 +4943,8 @@ Extract detailed budget-related rules such as allowable costs, disallowed costs,
 ## Suggested Labels
 phase-3, budget, rules, extraction, community-compute
 
-Issue 190 — Phase 3: Implement Distributed “Signal Boosting” for High-Fit Opportunities
+
+## Issue 190 — Phase 3: Implement Distributed “Signal Boosting” for High-Fit Opportunities
 ## Summary
 Automatically identify high-fit, high-value opportunities for applicants and boost their visibility in search results and personalized recommendations.
 
@@ -4799,7 +4970,8 @@ Automatically identify high-fit, high-value opportunities for applicants and boo
 ## Suggested Labels
 phase-3, recommendations, ranking, personalization, community-compute
 
-Issue 191 — Phase 3: Implement Distributed Multi-Document Citation Graph (Cross-Referenced Requirements)
+
+## Issue 191 — Phase 3: Implement Distributed Multi-Document Citation Graph (Cross-Referenced Requirements)
 ## Summary
 Build a citation graph linking related documents, attachments, templates, and referenced resources to show how different components connect.
 
@@ -4825,7 +4997,8 @@ Build a citation graph linking related documents, attachments, templates, and re
 ## Suggested Labels
 phase-3, graph, citations, documents, community-compute
 
-Issue 192 — Phase 3: Implement Distributed “Opportunity Readability Scoring” (Formal Grade-Level Metrics)
+
+## Issue 192 — Phase 3: Implement Distributed “Opportunity Readability Scoring” (Formal Grade-Level Metrics)
 ## Summary
 Assign a readability score to each opportunity based on formal metrics (Flesch-Kincaid, SMOG, etc.) to help applicants gauge textual complexity.
 
@@ -4851,7 +5024,8 @@ Assign a readability score to each opportunity based on formal metrics (Flesch-K
 ## Suggested Labels
 phase-3, readability, scoring, analytics, community-compute
 
-Issue 193 — Phase 3: Implement Distributed Opportunity “Completeness Repair” Pipeline (Auto-Fill Missing Metadata)
+
+## Issue 193 — Phase 3: Implement Distributed Opportunity “Completeness Repair” Pipeline (Auto-Fill Missing Metadata)
 ## Summary
 Automatically repair missing metadata fields using fallback extraction, cross-document inference, and contextual prediction.
 
@@ -4877,7 +5051,8 @@ Automatically repair missing metadata fields using fallback extraction, cross-do
 ## Suggested Labels
 phase-3, completeness, repair, inference, community-compute
 
-Issue 194 — Phase 3: Implement Grant Opportunity Policy Change Detection (Automatic Updates to Requirements)
+
+## Issue 194 — Phase 3: Implement Grant Opportunity Policy Change Detection (Automatic Updates to Requirements)
 ## Summary
 Identify changes in policy or compliance rules referenced in opportunities when regulation updates occur.
 
@@ -4903,7 +5078,8 @@ Identify changes in policy or compliance rules referenced in opportunities when 
 ## Suggested Labels
 phase-3, policy, compliance, detection, community-compute
 
-Issue 195 — Phase 3: Implement Distributed “Opportunity Similarity Clustering” (Grouping Related Opportunities)
+
+## Issue 195 — Phase 3: Implement Distributed “Opportunity Similarity Clustering” (Grouping Related Opportunities)
 ## Summary
 Cluster opportunities using embedding similarity, sector overlap, structure, and funding patterns to group related or substitutable grants.
 
@@ -4929,7 +5105,7 @@ Cluster opportunities using embedding similarity, sector overlap, structure, and
 ## Suggested Labels
 phase-3, clustering, similarity, embeddings, community-compute
 
-Issue 196 — Phase 3: Implement Distributed “Application Success Indicator” Scoring (Likelihood of Success Estimate)
+## Issue 196 — Phase 3: Implement Distributed “Application Success Indicator” Scoring (Likelihood of Success Estimate)
 ## Summary
 Estimate the likelihood of success for an applicant class (nonprofits, universities, municipalities) based on historical award patterns and opportunity attributes.
 
@@ -4955,7 +5131,8 @@ Estimate the likelihood of success for an applicant class (nonprofits, universit
 ## Suggested Labels
 phase-3, success, prediction, analytics, community-compute
 
-Issue 197 — Phase 3: Implement Distributed “Grant Opportunity Volatility Index”
+
+## Issue 197 — Phase 3: Implement Distributed “Grant Opportunity Volatility Index”
 ## Summary
 Compute a volatility index representing how frequently an opportunity or program changes key details such as funding amounts, deadlines, or requirements.
 
@@ -4981,7 +5158,8 @@ Compute a volatility index representing how frequently an opportunity or program
 ## Suggested Labels
 phase-3, volatility, scoring, analytics, community-compute
 
-Issue 198 — Phase 3: Implement Opportunity “Funding Stability Forecast” (Future Reliability Modeling)
+
+## Issue 198 — Phase 3: Implement Opportunity “Funding Stability Forecast” (Future Reliability Modeling)
 ## Summary
 Predict how stable or unstable future funding availability is for a given program, based on historical continuity, agency budgets, and cycle patterns.
 
@@ -5007,7 +5185,8 @@ Predict how stable or unstable future funding availability is for a given progra
 ## Suggested Labels
 phase-3, forecasting, stability, analytics, community-compute
 
-Issue 199 — Phase 3: Implement Distributed “Complexity Hotspot” Detection (Challenging Sections)
+
+## Issue 199 — Phase 3: Implement Distributed “Complexity Hotspot” Detection (Challenging Sections)
 ## Summary
 Find localized regions of high complexity within opportunity documents—such as dense regulatory sections, intricate requirements, or technical demands.
 
@@ -5033,7 +5212,8 @@ Find localized regions of high complexity within opportunity documents—such as
 ## Suggested Labels
 phase-3, complexity, nlp, hotspots, community-compute
 
-Issue 200 — Phase 3: Implement Distributed Grant URL Integrity Checker (Link Health Monitoring)
+
+## Issue 200 — Phase 3: Implement Distributed Grant URL Integrity Checker (Link Health Monitoring)
 ## Summary
 Validate all URLs associated with opportunities—including attachments, portals, agency websites, and references—to detect broken or outdated links.
 
@@ -5059,7 +5239,8 @@ Validate all URLs associated with opportunities—including attachments, portals
 ## Suggested Labels
 phase-3, validation, urls, quality, community-compute
 
-Issue 201 — Phase 3: Implement Distributed Data Provenance Tracking (Field-Level Source Attribution)
+
+## Issue 201 — Phase 3: Implement Distributed Data Provenance Tracking (Field-Level Source Attribution)
 ## Summary
 Track the origin of every extracted field—text, attachment, inferred value, repaired data—to ensure transparency, auditability, and trust.
 
@@ -5085,7 +5266,8 @@ Track the origin of every extracted field—text, attachment, inferred value, re
 ## Suggested Labels
 phase-3, provenance, transparency, auditing, community-compute
 
-Issue 202 — Phase 3: Implement Distributed “Narrative Keyword Extraction” (Topic Signals for Proposal Drafting)
+
+## Issue 202 — Phase 3: Implement Distributed “Narrative Keyword Extraction” (Topic Signals for Proposal Drafting)
 ## Summary
 Extract high-value keywords and thematic signals from opportunity text to guide applicants in drafting aligned narratives and proposals.
 
@@ -5111,7 +5293,8 @@ Extract high-value keywords and thematic signals from opportunity text to guide 
 ## Suggested Labels
 phase-3, nlp, keywords, extraction, community-compute
 
-Issue 203 — Phase 3: Implement Distributed “Funding Intent Classification” (Capacity-Building vs Implementation)
+
+## Issue 203 — Phase 3: Implement Distributed “Funding Intent Classification” (Capacity-Building vs Implementation)
 ## Summary
 Classify opportunities based on their underlying intent—such as capacity building, research, implementation, pilot programs, or expansion efforts.
 
@@ -5137,7 +5320,8 @@ Classify opportunities based on their underlying intent—such as capacity build
 ## Suggested Labels
 phase-3, classification, nlp, intent, community-compute
 
-Issue 204 — Phase 3: Implement “Opportunity Reasonableness Check” (Feasibility vs Award Size)
+
+## Issue 204 — Phase 3: Implement “Opportunity Reasonableness Check” (Feasibility vs Award Size)
 ## Summary
 Flag opportunities where the expected deliverables or project scope appear unrealistic compared to the award amount or available funding.
 
@@ -5163,7 +5347,8 @@ Flag opportunities where the expected deliverables or project scope appear unrea
 ## Suggested Labels
 phase-3, scoring, feasibility, analytics, community-compute
 
-Issue 205 — Phase 3: Implement Distributed “Eligibility Region Expansion” (Cross-Border Eligibility Detection)
+
+## Issue 205 — Phase 3: Implement Distributed “Eligibility Region Expansion” (Cross-Border Eligibility Detection)
 ## Summary
 Detect opportunities where eligibility extends beyond the expected geographic region—such as international eligibility for U.S. funders or vice versa.
 
@@ -5189,7 +5374,8 @@ Detect opportunities where eligibility extends beyond the expected geographic re
 ## Suggested Labels
 phase-3, eligibility, region, extraction, community-compute
 
-Issue 206 — Phase 3: Implement Distributed “Cross-Opportunity Redundancy Compression” (Shared Text Deduplication)
+
+## Issue 206 — Phase 3: Implement Distributed “Cross-Opportunity Redundancy Compression” (Shared Text Deduplication)
 ## Summary
 Identify large blocks of boilerplate text shared across multiple opportunities (e.g., organizational mission, disclaimers) and compress them for storage efficiency.
 
@@ -5215,7 +5401,8 @@ Identify large blocks of boilerplate text shared across multiple opportunities (
 ## Suggested Labels
 phase-3, compression, deduplication, storage, community-compute
 
-Issue 207 — Phase 3: Implement Distributed “Grant Opportunity Sentiment Analysis” (Tone Toward Applicants)
+
+## Issue 207 — Phase 3: Implement Distributed “Grant Opportunity Sentiment Analysis” (Tone Toward Applicants)
 ## Summary
 Analyze sentiment and tone towards applicants—such as supportive, neutral, demanding, or discouraging language—to guide applicant expectations.
 
@@ -5241,7 +5428,8 @@ Analyze sentiment and tone towards applicants—such as supportive, neutral, dem
 ## Suggested Labels
 phase-3, sentiment, nlp, analytics, community-compute
 
-Issue 208 — Phase 3: Implement Distributed “Opportunity Requirement Density Mapping”
+
+## Issue 208 — Phase 3: Implement Distributed “Opportunity Requirement Density Mapping”
 ## Summary
 Map the density of requirements across the document to highlight “heavy” sections containing numerous obligations, detailed rules, or instructions.
 
@@ -5267,7 +5455,8 @@ Map the density of requirements across the document to highlight “heavy” sec
 ## Suggested Labels
 phase-3, density, extraction, nlp, community-compute
 
-Issue 209 — Phase 3: Implement Distributed “Opportunity Structural Variation Detection”
+
+## Issue 209 — Phase 3: Implement Distributed “Opportunity Structural Variation Detection”
 ## Summary
 Detect unusual or non-standard document structures across opportunities to highlight grants that require extra review or contain complex formatting.
 
@@ -5293,7 +5482,8 @@ Detect unusual or non-standard document structures across opportunities to highl
 ## Suggested Labels
 phase-3, structure, anomaly, validation, community-compute
 
-Issue 210 — Phase 3: Implement Distributed “Regulatory Impact Profiling” (Compliance Burden Analysis)
+
+## Issue 210 — Phase 3: Implement Distributed “Regulatory Impact Profiling” (Compliance Burden Analysis)
 ## Summary
 Profile the regulatory burden of each opportunity by identifying references to compliance frameworks, mandatory certifications, and reporting obligations.
 
@@ -5319,7 +5509,8 @@ Profile the regulatory burden of each opportunity by identifying references to c
 ## Suggested Labels
 phase-3, compliance, regulatory, scoring, community-compute
 
-Issue 211 — Phase 3: Implement Distributed “Opportunity Abstract Generator” (Ultra-Short Summary)
+
+## Issue 211 — Phase 3: Implement Distributed “Opportunity Abstract Generator” (Ultra-Short Summary)
 ## Summary
 Generate a 1–2 sentence abstract summarizing the core purpose, eligibility, and funding intent of each opportunity for quick applicant scanning.
 
@@ -5345,7 +5536,7 @@ Generate a 1–2 sentence abstract summarizing the core purpose, eligibility, an
 ## Suggested Labels
 phase-3, summarization, nlp, generation, community-compute
 
-Issue 212 — Phase 3: Implement Distributed “Cross-Agency Harmonization” (Normalize Inconsistent Terminology)
+## Issue 212 — Phase 3: Implement Distributed “Cross-Agency Harmonization” (Normalize Inconsistent Terminology)
 ## Summary
 Normalize inconsistent terms used by different agencies for similar concepts (e.g., “award ceiling” vs “max funding,” “eligible applicants” vs “who may apply”).
 
@@ -5371,7 +5562,8 @@ Normalize inconsistent terms used by different agencies for similar concepts (e.
 ## Suggested Labels
 phase-3, normalization, terminology, metadata, community-compute
 
-Issue 213 — Phase 3: Implement Distributed “Opportunity Confidence Repair” (Recalculate Low-Confidence Fields)
+
+## Issue 213 — Phase 3: Implement Distributed “Opportunity Confidence Repair” (Recalculate Low-Confidence Fields)
 ## Summary
 Automatically attempt to repair or recalculate fields marked as low-confidence by using fallback extraction, redundancy, or inference models.
 
@@ -5397,7 +5589,8 @@ Automatically attempt to repair or recalculate fields marked as low-confidence b
 ## Suggested Labels
 phase-3, repair, confidence, validation, community-compute
 
-Issue 214 — Phase 3: Implement Distributed “Opportunity SEO Metadata Extraction” (Keywords, Topics, Index Terms)
+
+## Issue 214 — Phase 3: Implement Distributed “Opportunity SEO Metadata Extraction” (Keywords, Topics, Index Terms)
 ## Summary
 Extract SEO-style metadata—keywords, topical themes, indexable descriptors—to improve search relevance and classification.
 
@@ -5423,7 +5616,8 @@ Extract SEO-style metadata—keywords, topical themes, indexable descriptors—t
 ## Suggested Labels
 phase-3, seo, keywords, extraction, nlp, community-compute
 
-Issue 215 — Phase 3: Implement Distributed “Opportunity Impact Geography Modeling” (Affected Populations & Regions)
+
+## Issue 215 — Phase 3: Implement Distributed “Opportunity Impact Geography Modeling” (Affected Populations & Regions)
 ## Summary
 Identify which populations, communities, and regions are impacted by an opportunity—not just who is eligible to apply.
 
@@ -5449,7 +5643,8 @@ Identify which populations, communities, and regions are impacted by an opportun
 ## Suggested Labels
 phase-3, geography, populations, analytics, community-compute
 
-Issue 216 — Phase 3: Implement Distributed “Grant Opportunity Lifecycle Narrative Generator”
+
+## Issue 216 — Phase 3: Implement Distributed “Grant Opportunity Lifecycle Narrative Generator”
 ## Summary
 Generate a clear narrative explaining how an opportunity progresses from presolicitation → open cycle → award → reporting → close-out.
 
@@ -5475,7 +5670,8 @@ Generate a clear narrative explaining how an opportunity progresses from presoli
 ## Suggested Labels
 phase-3, lifecycle, narrative, nlp, community-compute
 
-Issue 217 — Phase 3: Implement Distributed “Grant Opportunity Accessibility Scoring”
+
+## Issue 217 — Phase 3: Implement Distributed “Grant Opportunity Accessibility Scoring”
 ## Summary
 Score each opportunity based on accessibility indicators such as readability, structural clarity, document complexity, jargon density, and formatting quality.
 
@@ -5501,7 +5697,8 @@ Score each opportunity based on accessibility indicators such as readability, st
 ## Suggested Labels
 phase-3, accessibility, scoring, nlp, community-compute
 
-Issue 218 — Phase 3: Implement Distributed “Cross-Document Opportunity Linking” (Program Lineage Tracking)
+
+## Issue 218 — Phase 3: Implement Distributed “Cross-Document Opportunity Linking” (Program Lineage Tracking)
 ## Summary
 Link opportunities that are predecessors, continuations, or evolutions of prior programs to help applicants understand long-term funding patterns.
 
@@ -5527,7 +5724,8 @@ Link opportunities that are predecessors, continuations, or evolutions of prior 
 ## Suggested Labels
 phase-3, lineage, linking, history, community-compute
 
-Issue 219 — Phase 3: Implement Distributed “Grant Probability Category Assignment” (Low, Medium, High)
+
+## Issue 219 — Phase 3: Implement Distributed “Grant Probability Category Assignment” (Low, Medium, High)
 ## Summary
 Convert complex scoring outputs into simple categorical ratings that applicants can quickly interpret.
 
@@ -5553,7 +5751,8 @@ Convert complex scoring outputs into simple categorical ratings that applicants 
 ## Suggested Labels
 phase-3, scoring, classification, analytics, community-compute
 
-Issue 220 — Phase 3: Implement Distributed “Opportunity Internal Consistency Checker”
+
+## Issue 220 — Phase 3: Implement Distributed “Opportunity Internal Consistency Checker”
 ## Summary
 Detect contradictions or inconsistencies within the same opportunity (e.g., eligibility stated differently in multiple sections).
 
@@ -5579,7 +5778,8 @@ Detect contradictions or inconsistencies within the same opportunity (e.g., elig
 ## Suggested Labels
 phase-3, validation, consistency, nlp, community-compute
 
-Issue 221 — Phase 3: Implement Distributed “Award Structure Extraction” (Cost Share, Match, Restrictions)
+
+## Issue 221 — Phase 3: Implement Distributed “Award Structure Extraction” (Cost Share, Match, Restrictions)
 ## Summary
 Extract award structure details like required match percentages, cost-sharing rules, disallowed costs, and spending restrictions.
 
@@ -5605,7 +5805,8 @@ Extract award structure details like required match percentages, cost-sharing ru
 ## Suggested Labels
 phase-3, extraction, awards, budgeting, community-compute
 
-Issue 222 — Phase 3: Implement Distributed “Submission Barrier Detection” (Hidden Requirements & Special Conditions)
+
+## Issue 222 — Phase 3: Implement Distributed “Submission Barrier Detection” (Hidden Requirements & Special Conditions)
 ## Summary
 Identify hidden or non-obvious submission barriers such as required SAM.gov status, registrations, pre-application calls, or mandatory partner letters.
 
@@ -5631,7 +5832,8 @@ Identify hidden or non-obvious submission barriers such as required SAM.gov stat
 ## Suggested Labels
 phase-3, barriers, extraction, readiness, community-compute
 
-Issue 223 — Phase 3: Implement Distributed “Budget Complexity Scoring”
+
+## Issue 223 — Phase 3: Implement Distributed “Budget Complexity Scoring”
 ## Summary
 Score the complexity of required budgeting elements, including cost categories, match requirements, reporting cadence, and financial compliance expectations.
 
@@ -5657,7 +5859,8 @@ Score the complexity of required budgeting elements, including cost categories, 
 ## Suggested Labels
 phase-3, budgeting, scoring, financial, community-compute
 
-Issue 224 — Phase 3: Implement Distributed "Grant Opportunity Timeline Extractor" (Schedules, Milestones, Deadlines)
+
+## Issue 224 — Phase 3: Implement Distributed "Grant Opportunity Timeline Extractor" (Schedules, Milestones, Deadlines)
 ## Summary
 Extract all timeline-related information (program dates, milestones, required events, webinars, reporting deadlines) into a structured timeline.
 
@@ -5683,7 +5886,7 @@ Extract all timeline-related information (program dates, milestones, required ev
 ## Suggested Labels
 phase-3, timeline, extraction, nlp, community-compute
 
-Issue 225 — Phase 3: Implement Distributed “Grant Opportunity Entity Linking” (Organizations, Agencies, Partners)
+## Issue 225 — Phase 3: Implement Distributed “Grant Opportunity Entity Linking” (Organizations, Agencies, Partners)
 ## Summary
 Link all referenced organizations—funders, sub-agencies, partners, collaborators—into structured metadata with entity resolution.
 
@@ -5709,7 +5912,8 @@ Link all referenced organizations—funders, sub-agencies, partners, collaborato
 ## Suggested Labels
 phase-3, entities, linking, metadata, community-compute
 
-Issue 226 — Phase 3: Implement Distributed “Grant Opportunity Execution Risk Scoring”
+
+## Issue 226 — Phase 3: Implement Distributed “Grant Opportunity Execution Risk Scoring”
 ## Summary
 Score risks associated with executing the program if awarded, based on reporting load, regulatory burden, deliverable scope, and structural instability.
 
@@ -5735,7 +5939,8 @@ Score risks associated with executing the program if awarded, based on reporting
 ## Suggested Labels
 phase-3, risk, scoring, analytics, community-compute
 
-Issue 227 — Phase 3: Implement Distributed “Grant Opportunity Data Freshness Scoring”
+
+## Issue 227 — Phase 3: Implement Distributed “Grant Opportunity Data Freshness Scoring”
 ## Summary
 Score how fresh or stale an opportunity’s metadata is, based on update frequency, version history, and agency revision patterns.
 
@@ -5761,7 +5966,8 @@ Score how fresh or stale an opportunity’s metadata is, based on update frequen
 ## Suggested Labels
 phase-3, freshness, scoring, metadata, community-compute
 
-Issue 228 — Phase 3: Implement Distributed “Opportunity Multi-Language Support Detection”
+
+## Issue 228 — Phase 3: Implement Distributed “Opportunity Multi-Language Support Detection”
 ## Summary
 Detect whether the opportunity or its required materials are available in multiple languages and extract relevant multilingual links.
 
@@ -5787,7 +5993,8 @@ Detect whether the opportunity or its required materials are available in multip
 ## Suggested Labels
 phase-3, language, accessibility, extraction, community-compute
 
-Issue 229 — Phase 3: Implement Distributed “Opportunity Reviewer Workload Estimation”
+
+## Issue 229 — Phase 3: Implement Distributed “Opportunity Reviewer Workload Estimation”
 ## Summary
 Estimate the total workload required for reviewers—helping applicants understand complexity and helping internal users prioritize opportunities.
 
@@ -5813,7 +6020,8 @@ Estimate the total workload required for reviewers—helping applicants understa
 ## Suggested Labels
 phase-3, workload, scoring, analytics, community-compute
 
-Issue 230 — Phase 3: Implement Distributed “Opportunity Funding Pattern Modeling” (Recurring Cycles & Predictive Patterns)
+
+## Issue 230 — Phase 3: Implement Distributed “Opportunity Funding Pattern Modeling” (Recurring Cycles & Predictive Patterns)
 ## Summary
 Model recurring funding cycles and patterns to predict future open dates, deadlines, and expected opportunity windows.
 
@@ -5839,7 +6047,8 @@ Model recurring funding cycles and patterns to predict future open dates, deadli
 ## Suggested Labels
 phase-3, forecasting, cycles, analytics, community-compute
 
-Issue 231 — Phase 3: Implement Distributed “Detailed Cost Category Extraction”
+
+## Issue 231 — Phase 3: Implement Distributed “Detailed Cost Category Extraction”
 ## Summary
 Extract detailed cost categories (personnel, equipment, travel, supplies, contractual, indirects) and map them to standardized budgeting structures.
 
@@ -5865,7 +6074,8 @@ Extract detailed cost categories (personnel, equipment, travel, supplies, contra
 ## Suggested Labels
 phase-3, budgeting, extraction, financial, community-compute
 
-Issue 232 — Phase 3: Implement Distributed “Opportunity Data Integrity Checker” (Structural & Logical Integrity)
+
+## Issue 232 — Phase 3: Implement Distributed “Opportunity Data Integrity Checker” (Structural & Logical Integrity)
 ## Summary
 Verify that extracted opportunity metadata is internally consistent, structurally sound, and logically valid across all fields.
 
@@ -5891,7 +6101,8 @@ Verify that extracted opportunity metadata is internally consistent, structurall
 ## Suggested Labels
 phase-3, validation, integrity, quality, community-compute
 
-Issue 233 — Phase 3: Implement Distributed “Opportunity Partnership Requirement Extraction”
+
+## Issue 233 — Phase 3: Implement Distributed “Opportunity Partnership Requirement Extraction”
 ## Summary
 Extract details about mandatory or optional partnership requirements, such as consortiums, MOUs, subaward roles, or collaborative structures.
 
@@ -5917,7 +6128,8 @@ Extract details about mandatory or optional partnership requirements, such as co
 ## Suggested Labels
 phase-3, partnerships, extraction, eligibility, community-compute
 
-Issue 234 — Phase 3: Implement Distributed “Opportunity Deliverable Extraction” (Outputs & Reporting Obligations)
+
+## Issue 234 — Phase 3: Implement Distributed “Opportunity Deliverable Extraction” (Outputs & Reporting Obligations)
 ## Summary
 Extract expected deliverables and reporting requirements, mapping them to structured fields for feasibility scoring and applicant planning.
 
@@ -5943,7 +6155,7 @@ Extract expected deliverables and reporting requirements, mapping them to struct
 ## Suggested Labels
 phase-3, deliverables, extraction, reporting, community-compute
 
-Issue 235 — Phase 3: Implement Distributed “Opportunity Budget Restriction Classifier”
+## Issue 235 — Phase 3: Implement Distributed “Opportunity Budget Restriction Classifier”
 ## Summary
 Classify restricted budget items (e.g., alcohol, construction, lobbying, participant incentives) and map them to standardized restriction categories.
 
@@ -5969,7 +6181,7 @@ Classify restricted budget items (e.g., alcohol, construction, lobbying, partici
 ## Suggested Labels
 phase-3, budgeting, restrictions, classification, community-compute
 
-Issue 236 — Phase 3: Implement Distributed “Grant Opportunity Outreach Requirement Extraction”
+## Issue 236 — Phase 3: Implement Distributed “Grant Opportunity Outreach Requirement Extraction”
 ## Summary
 Extract requirements for community outreach, stakeholder engagement, dissemination plans, or public involvement obligations.
 
@@ -5995,7 +6207,8 @@ Extract requirements for community outreach, stakeholder engagement, disseminati
 ## Suggested Labels
 phase-3, outreach, extraction, requirements, community-compute
 
-Issue 237 — Phase 3: Implement Distributed “Grant Opportunity Evaluation Criteria Extraction”
+
+## Issue 237 — Phase 3: Implement Distributed “Grant Opportunity Evaluation Criteria Extraction”
 ## Summary
 Extract scoring rubrics, evaluation criteria, point distributions, and reviewer priorities from opportunity documents.
 
@@ -6021,7 +6234,8 @@ Extract scoring rubrics, evaluation criteria, point distributions, and reviewer 
 ## Suggested Labels
 phase-3, extraction, evaluation, scoring, community-compute
 
-Issue 238 — Phase 3: Implement Distributed “Opportunity Environmental Impact Requirement Extraction”
+
+## Issue 238 — Phase 3: Implement Distributed “Opportunity Environmental Impact Requirement Extraction”
 ## Summary
 Extract environmental requirements such as sustainability mandates, NEPA statements, emissions standards, or environmental justice components.
 
@@ -6047,7 +6261,8 @@ Extract environmental requirements such as sustainability mandates, NEPA stateme
 ## Suggested Labels
 phase-3, environmental, extraction, requirements, community-compute
 
-Issue 239 — Phase 3: Implement Distributed “Opportunity Narrative Length Extraction” (Page & Word Limits)
+
+## Issue 239 — Phase 3: Implement Distributed “Opportunity Narrative Length Extraction” (Page & Word Limits)
 ## Summary
 Extract narrative length constraints (page limits, word caps, character counts) to assist applicants in planning proposals.
 
@@ -6073,7 +6288,8 @@ Extract narrative length constraints (page limits, word caps, character counts) 
 ## Suggested Labels
 phase-3, narratives, extraction, constraints, community-compute
 
-Issue 240 — Phase 3: Implement Distributed “Opportunity Fund Distribution Structure Extraction”
+
+## Issue 240 — Phase 3: Implement Distributed “Opportunity Fund Distribution Structure Extraction”
 ## Summary
 Extract details about how funds will be distributed (reimbursement, advance payments, milestone-based, formula-based, etc.).
 
@@ -6099,7 +6315,8 @@ Extract details about how funds will be distributed (reimbursement, advance paym
 ## Suggested Labels
 phase-3, budgeting, extraction, funding, community-compute
 
-Issue 241 — Phase 3: Implement Distributed “Opportunity Collaboration Incentive Detection”
+
+## Issue 241 — Phase 3: Implement Distributed “Opportunity Collaboration Incentive Detection”
 ## Summary
 Identify whether opportunities reward collaboration, consortium proposals, or cross-sector partnerships with additional points or funding advantages.
 
@@ -6125,7 +6342,8 @@ Identify whether opportunities reward collaboration, consortium proposals, or cr
 ## Suggested Labels
 phase-3, collaboration, incentives, extraction, community-compute
 
-Issue 242 — Phase 3: Implement Distributed “Opportunity Data Confidence Aggregation Engine”
+
+## Issue 242 — Phase 3: Implement Distributed “Opportunity Data Confidence Aggregation Engine”
 ## Summary
 Aggregate confidence scores from multiple extraction pipelines (OCR, NLP, inference, repair jobs) into a unified confidence rating for each opportunity.
 
@@ -6151,7 +6369,8 @@ Aggregate confidence scores from multiple extraction pipelines (OCR, NLP, infere
 ## Suggested Labels
 phase-3, confidence, aggregation, quality, community-compute
 
-Issue 243 — Phase 3: Implement Distributed “Grant Opportunity Metadata Drift Detection”
+
+## Issue 243 — Phase 3: Implement Distributed “Grant Opportunity Metadata Drift Detection”
 ## Summary
 Detect when extracted metadata drifts over time due to changes in document structure, formatting, or agency publishing habits.
 
@@ -6177,7 +6396,8 @@ Detect when extracted metadata drifts over time due to changes in document struc
 ## Suggested Labels
 phase-3, drift, monitoring, quality, community-compute
 
-Issue 244 — Phase 3: Implement Distributed “Grant Opportunity Eligibility Exception Extraction”
+
+## Issue 244 — Phase 3: Implement Distributed “Grant Opportunity Eligibility Exception Extraction”
 ## Summary
 Extract exceptions or special eligibility conditions, such as waivers, alternative requirements, or exceptional cases.
 
@@ -6203,7 +6423,8 @@ Extract exceptions or special eligibility conditions, such as waivers, alternati
 ## Suggested Labels
 phase-3, eligibility, exceptions, extraction, community-compute
 
-Issue 245 — Phase 3: Implement Distributed “Grant Opportunity Supplemental Document Detection”
+
+## Issue 245 — Phase 3: Implement Distributed “Grant Opportunity Supplemental Document Detection”
 ## Summary
 Detect when an opportunity requires supplemental documents beyond the main application (e.g., resumes, key personnel bios, letters of support, detailed budgets).
 
@@ -6229,7 +6450,8 @@ Detect when an opportunity requires supplemental documents beyond the main appli
 ## Suggested Labels
 phase-3, documents, supplements, extraction, community-compute
 
-Issue 246 — Phase 3: Implement Distributed “Post-Award Obligation Extraction” (Reporting, Audits, Compliance)
+
+## Issue 246 — Phase 3: Implement Distributed “Post-Award Obligation Extraction” (Reporting, Audits, Compliance)
 ## Summary
 Extract post-award obligations such as reporting cadence, audit requirements, compliance checks, and financial oversight expectations.
 
@@ -6255,7 +6477,8 @@ Extract post-award obligations such as reporting cadence, audit requirements, co
 ## Suggested Labels
 phase-3, post-award, reporting, compliance, community-compute
 
-Issue 247 — Phase 3: Implement Distributed “Grant Opportunity Cross-Document Conflict Resolution”
+
+## Issue 247 — Phase 3: Implement Distributed “Grant Opportunity Cross-Document Conflict Resolution”
 ## Summary
 Resolve conflicts detected across multiple documents or attachments for the same opportunity, selecting the most authoritative or recent values.
 
@@ -6281,7 +6504,8 @@ Resolve conflicts detected across multiple documents or attachments for the same
 ## Suggested Labels
 phase-3, resolution, validation, metadata, community-compute
 
-Issue 248 — Phase 3: Implement Distributed “Grant Opportunity Compliance Cost Estimation”
+
+## Issue 248 — Phase 3: Implement Distributed “Grant Opportunity Compliance Cost Estimation”
 ## Summary
 Estimate the administrative and operational cost of complying with grant requirements (reporting, audits, monitoring, certifications).
 
@@ -6307,7 +6531,8 @@ Estimate the administrative and operational cost of complying with grant require
 ## Suggested Labels
 phase-3, compliance, cost, scoring, community-compute
 
-Issue 249 — Phase 3: Implement Distributed “Opportunity Award Allocation Model Extraction” (How Funds Are Distributed Among Awardees)
+
+## Issue 249 — Phase 3: Implement Distributed “Opportunity Award Allocation Model Extraction” (How Funds Are Distributed Among Awardees)
 ## Summary
 Extract rules determining how funding is allocated—competitive scoring, formula-based distribution, ranking tiers, or equity-adjusted models.
 
@@ -6333,7 +6558,8 @@ Extract rules determining how funding is allocated—competitive scoring, formul
 ## Suggested Labels
 phase-3, allocation, extraction, awards, community-compute
 
-Issue 250 — Phase 3: Implement Distributed “Grant Opportunity Trustworthiness Score”
+
+## Issue 250 — Phase 3: Implement Distributed “Grant Opportunity Trustworthiness Score”
 ## Summary
 Combine volatility, integrity, update frequency, historical stability, source authority, accessibility, and consistency into a single trustworthiness metric.
 
@@ -6358,5 +6584,3 @@ Combine volatility, integrity, update frequency, historical stability, source au
 
 ## Suggested Labels
 phase-3, scoring, trust, quality, community-compute
-
-
