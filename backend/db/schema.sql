@@ -56,3 +56,34 @@ CREATE TABLE IF NOT EXISTS community_job_results (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 SET FOREIGN_KEY_CHECKS = 1;
+
+-- ----------------------------------------------------------
+-- Community Compute: community_jobs
+-- ----------------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS community_jobs (
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  job_type VARCHAR(255) NOT NULL,
+  payload_json JSON NOT NULL,
+  status ENUM('pending', 'in_progress', 'completed', 'failed') NOT NULL DEFAULT 'pending',
+  claimed_by_node_id BIGINT UNSIGNED NULL, COMMENT 'FK to community_nodes'
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY (claimed_by_node_id) REFERENCES community_nodes(id)
+);
+
+-- ----------------------------------------------------------
+-- Community Compute: community_job_result
+-- ----------------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS community_job_result (
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  job_id BIGINT UNSIGNED NOT NULL, COMMENT 'FK to community_jobs'
+  node_id BIGINT UNSIGNED NOT NULL, COMMENT 'FK to community_nodes'	
+  result_json JSON NOT NULL,
+  result_checksum CHAR(64) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY (job_id) REFERENCES community_jobs(id),
+  FOREIGN KEY (node_id) REFERENCES community_nodes(id)
+);
