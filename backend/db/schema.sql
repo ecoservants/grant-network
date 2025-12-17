@@ -5,9 +5,7 @@
 -- This file defines the canonical database schema
 -- for the Grant Network + Community Compute system.
 -- ==========================================================
-
-CREATE DATABASE IF NOT EXISTS ecoservants_ogn CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
-USE ecoservants_ogn;
+SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------------------------------------
 -- Core: organizations
@@ -18,7 +16,9 @@ CREATE TABLE IF NOT EXISTS organizations (
   domain VARCHAR(255),
   homepage_url VARCHAR(1024),
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+  UNIQUE KEY idx_name (name),
+  INDEX idx_domain (domain)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------------------------------------
 -- Core: grants
@@ -39,11 +39,12 @@ CREATE TABLE IF NOT EXISTS grants (
   robots_allowed TINYINT(1) DEFAULT 1 COMMENT '0 if robots.txt blocks; 1 if allowed',
   robots_audit_ts DATETIME COMMENT 'When robots.txt was last checked',
   robots_log_url TEXT COMMENT 'Path to detailed per-domain robots audit log',
-  content_hash CHAR(32) NOT NULL COMMENT 'MD5 or SHA256 of grant content',
+  content_hash CHAR(32) NOT NULL COMMENT 'MD5 hash of grant content',
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   FOREIGN KEY (organization_id) REFERENCES organizations(id) ON UPDATE CASCADE ON DELETE RESTRICT,
   UNIQUE KEY uq_grant_url_hash (url_hash),
+  INDEX idx_organization_id (organization_id),
   FULLTEXT KEY idx_title_desc (title, description)
 ) ENGINE=InnoDB ROW_FORMAT=DYNAMIC;
 
