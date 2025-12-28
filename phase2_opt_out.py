@@ -1,38 +1,58 @@
 from flask import Flask, request, jsonify
-import phase2_db  # Import from the same folder
+import phase2_db
 
 app = Flask(__name__)
 
 @app.route('/compute/opt-out', methods=['POST'])
 def opt_out():
-    data = request.json
-    node_public_id = data.get('node_public_id')
-    
-    if not node_public_id:
-        return jsonify({"error": "node_public_id is required"}), 400
+    # 1. Validate node identity via API token [Requirement]
+    api_token = request.headers.get('X-API-TOKEN')
+    if not api_token:
+        return jsonify({"error": "API token required"}), 401
     
     db = phase2_db.get_db_connection()
     cur = db.cursor()
     
-    # 1. Deactivate the node and record timestamp
-    cur.execute("""
-        UPDATE community_nodes 
-        SET is_active = 0, opt_out_at = NOW() 
-        WHERE node_public_id = %s
-    """, (node_public_id,))
-    
-    # 2. Invalidate all active sessions for this node
-    cur.execute("""
-        UPDATE community_node_sessions 
-        SET is_active = 0 
-        WHERE node_id = (SELECT id FROM community_nodes WHERE node_public_id = %s)
-    """, (node_public_id,))
-    
-    db.commit()
-    cur.close()
-    db.close()
-    
-    return jsonify({"status": "success", "message": "Node and sessions deactivated"}), 200
+    try:
+        # Check if node exists and get its ID
+        cur.execute("SELECT id FROM community_nodes WHERE api_token = %s", (api_token,))
+        node = cur.fetchone()
+        if not node:
+            return jsonify({"error": "Invalid node identity"}), 403
+        
+        node_id = node[0]
+
+        # 2. Mark node as inactive (is_active = 0) & Log event [Requirement]
+        cur.execute("""
+            UPDATE community_nodes 
+            SET is_active = 0, opt_out_at = NOW() 
+            WHERE id = %s
+        """, (node_id,))
+        
+        # 3. Terminate all active sessions [Requirement]
+        cur.execute("""
+            UPDATE community_node_sessions 
+            SET is_active = 0 
+            WHERE node_id = %s
+        """, (node_id,))
+        
+        # 4. Handle outstanding jobs (mark as abandoned/pending again) [Requirement]
+        # This prevents jobs from being "orphaned"
+        cur.execute("""
+            UPDATE jobs 
+            SET status = 'pending', claimed_by_node_id = NULL 
+            WHERE claimed_by_node_id = %s AND status = 'claimed'
+        """, (node_id,))
+        
+        db.commit()
+        return jsonify({"status": "success", "message": "Node opted out and jobs reassigned"}), 200
+
+    except Exception as e:
+        db.rollback()
+        return jsonify({"error": str(e)}), 500
+    finally:
+        cur.close()
+        db.close()
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=5000)
