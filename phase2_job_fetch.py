@@ -1,11 +1,14 @@
 from flask import Flask, request, jsonify
 import phase2_db
+import logging  # Added logging for debugging/monitoring [Reviewer Requirement]
 
+# Set up simple logging
+logging.basicConfig(level=logging.INFO)
 app = Flask(__name__)
 
 @app.route('/compute/job', methods=['GET'])
 def fetch_job():
-    # 1. Validate node authorization via API token [Requirement]
+    # 1. Validate node authorization via API token
     api_token = request.headers.get('X-API-TOKEN')
     if not api_token:
         return jsonify({"error": "Unauthorized"}), 401
@@ -14,8 +17,7 @@ def fetch_job():
     cur = db.cursor()
 
     try:
-        # 2. Node Eligibility Checks: Active status + Consent [Requirement]
-        # Ineligible nodes must receive correct error codes [Acceptance Criteria]
+        # 2. Node Eligibility Checks: Active status + Consent
         cur.execute("""
             SELECT id, is_active, consent_provided 
             FROM community_nodes 
@@ -32,20 +34,24 @@ def fetch_job():
 
         node_id = node[0]
 
-        # 3. Check for over-assignment: Node receives at most one job [Acceptance Criteria]
-        cur.execute("SELECT id FROM jobs WHERE claimed_by_node_id = %s AND status = 'claimed'", (node_id,))
+        # 3. Check for over-assignment (At most one job at a time)
+        # Updated table name to 'community_jobs' [Reviewer Requirement]
+        cur.execute("""
+            SELECT id FROM community_jobs 
+            WHERE claimed_by_node_id = %s AND status = 'claimed'
+        """, (node_id,))
         if cur.fetchone():
             return jsonify({"error": "Node already has an active job"}), 429
 
-        # 4. Fetch, Lock, and Mark Job (Scheduling Logic) [Requirement]
-        # SKIP LOCKED handles concurrency correctly [Acceptance Criteria]
+        # 4. Fetch, Lock, and Mark Job
+        # Updated table name to 'community_jobs'
         cur.execute("""
-            UPDATE jobs 
+            UPDATE community_jobs 
             SET status = 'claimed', 
                 claimed_by_node_id = %s,
                 claimed_at = NOW()
             WHERE id = (
-                SELECT id FROM jobs 
+                SELECT id FROM community_jobs 
                 WHERE status = 'pending' 
                 LIMIT 1 
                 FOR UPDATE SKIP LOCKED
@@ -56,8 +62,9 @@ def fetch_job():
         job = cur.fetchone()
         db.commit()
 
-        # 5. Return minimal JSON payload [Requirement]
+        # 5. Return standardized JSON payload with logging
         if job:
+            logging.info(f"Job {job[0]} claimed by node {node_id}") # [Reviewer Requirement]
             return jsonify({
                 "job_id": job[0],
                 "type": job[1],
@@ -67,8 +74,9 @@ def fetch_job():
             return jsonify({"message": "No pending jobs available"}), 404
 
     except Exception as e:
+        logging.error(f"Error in job fetch: {str(e)}") # [Reviewer Requirement]
         db.rollback()
-        return jsonify({"error": str(e)}), 500
+        return jsonify({"error": "Internal Server Error"}), 500
     finally:
         cur.close()
         db.close()
