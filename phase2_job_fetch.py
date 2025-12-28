@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-import phase2_db
+import from utils import phase2_db
 import logging  # Added logging for debugging/monitoring [Reviewer Requirement]
 
 # Set up simple logging
