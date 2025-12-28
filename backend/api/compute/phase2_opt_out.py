@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-import phase2_db
+import from utils import phase2_db
 import logging
 
 # Configure basic logging [Requirement: Log opt-out event]
@@ -71,3 +71,4 @@ def opt_out():
 
 if __name__ == '__main__':
     app.run(port=5000)
+
