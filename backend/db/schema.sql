@@ -197,3 +197,9 @@ CREATE TABLE IF NOT EXISTS domain_policy (
   INDEX idx_domain_policy_crawl (allow_crawl),
   INDEX idx_domain_policy_fetch (allow_fetch_documents)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC;
+-- CC-11 Migration: Add consent tracking fields
+ALTER TABLE community_nodes
+ADD COLUMN IF NOT EXISTS consent_provided BOOLEAN DEFAULT FALSE,
+ADD COLUMN IF NOT EXISTS consent_version VARCHAR(50),
+ADD COLUMN IF NOT EXISTS consent_hash VARCHAR(255),
+ADD COLUMN IF NOT EXISTS consent_updated_at TIMESTAMP;
