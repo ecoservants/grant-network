@@ -32,7 +32,7 @@ def download_and_extract_990(year: int) -> pd.DataFrame:
             z = zipfile.ZipFile(io.BytesIO(r.content))
             print(f"{year}: Found files in ZIP -> {z.namelist()}")
 
-            # Prefer CSV first
+            # zip can have dat or CSV file
             csv_files = [f for f in z.namelist() if f.endswith(".csv")]
             dat_files = [f for f in z.namelist() if f.endswith(".dat")]
 
