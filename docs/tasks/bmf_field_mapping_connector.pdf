@@ -1,0 +1,9 @@
+| Source Column (BMF) | Name          |
+| ------------------- | ------------- | 
+| EIN                 | ein           |
+| NAME                | org name      |
+| STREET              | street        |
+| CITY                | city          | 
+| STATE               | state         |
+| ZIP                 | zip           |
+| NTEE_CD             | ntee code     | 
