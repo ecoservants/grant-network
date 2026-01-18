@@ -1,6 +1,11 @@
 from flask import Flask, request, jsonify
-from utils import phase2_db
-from services.result_validation import validate_result_payload
+
+# NOTE:
+# Using absolute package imports to avoid ModuleNotFoundError when the app is
+# executed via Flask, CI, or module execution (python -m ...).
+# `backend` is now treated as a proper package via __init__.py files.
+from backend.utils.db import get_db_connection
+from backend.services.result_validation import validate_result_payload
 from services.job_result_handler import store_job_result
 import logging
 
@@ -23,7 +28,7 @@ def submit_job_result():
     if not job_id or not result_json or not result_checksum:
         return jsonify({"error": "job_id, result_json, result_checksum required"}), 400
 
-    db = phase2_db.get_db_connection()
+    db = get_db_connection()
     cur = db.cursor()
 
     try:
@@ -65,3 +70,4 @@ def submit_job_result():
 
 if __name__ == "__main__":
     app.run(port=5003)
+
