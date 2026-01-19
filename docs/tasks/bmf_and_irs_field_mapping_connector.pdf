@@ -1,0 +1,17 @@
+BMF-
+
+| Source Column (BMF) | Name          |
+| ------------------- | ------------- | 
+| EIN                 | ein           |
+| NAME                | org name      |
+| STREET              | street        |
+| CITY                | city          | 
+| STATE               | state         |
+| ZIP                 | zip           |
+| NTEE_CD             | ntee code     | 
+
+
+IRS - 
+
+- from the cols asked, IRS only has EIN column in the bulk downloads
+- the missing years are because there was no file in that year
