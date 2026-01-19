@@ -1,18 +1,10 @@
 import pandas as pd
-import requests, io, os, logging
+import requests, io, os
 from common.schemas import Funder
 from common.validators import validate_row
-import os
+from common.logger import get_logger
 
-# Setup logger
-os.makedirs("ingest_logs", exist_ok=True)
-logger = logging.getLogger("bmf_ingest")
-logger.setLevel(logging.INFO)
-fh = logging.FileHandler("ingest_logs/bmf_errors.log")
-fh.setLevel(logging.ERROR)
-formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-fh.setFormatter(formatter)
-logger.addHandler(fh)
+logger = get_logger("bmf_errors.log")
 
 STATES = [
     "al","ak","az","ar","ca","co","ct","de","dc","fl","ga","hi","id","il","in",
@@ -26,11 +18,20 @@ def download_bmf_state(state: str) -> pd.DataFrame:
     Parse EIN, organization names, addresses, NTEE codes"""
     url = f"https://www.irs.gov/pub/irs-soi/eo_{state}.csv"
     try:
-        r = requests.get(url)
+        r = requests.get(url, timeout=30)
         r.raise_for_status()
         df = pd.read_csv(io.StringIO(r.content.decode('utf-8')), dtype=str)
+
         # Keep only required columns
-        df = df[['EIN','NAME', 'STREET', 'CITY', 'STATE', 'ZIP', 'NTEE_CD']]
+        # added safe check for missing columns to avoid failure of pipeline if cols missings
+        expected_cols = ['EIN', 'NAME', 'STREET', 'CITY', 'STATE', 'ZIP', 'NTEE_CD']
+
+        missing_cols = set(expected_cols) - set(df.columns)
+
+        if missing_cols:
+            logger.warning(f"Missing expected columns: {missing_cols}")
+
+        df = df.reindex(columns=expected_cols)
         return df
     except Exception as e:
         logger.error(f"Failed to download/load BMF for {state}: {e}")

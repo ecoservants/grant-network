@@ -1,15 +1,8 @@
 import pandas as pd
-import requests, zipfile, io, os, logging
+import requests, zipfile, io, os
+from common.logger import get_logger
 
-# Setup logger
-os.makedirs("ingest_logs", exist_ok=True)
-logger = logging.getLogger("irs_990_ingest")
-logger.setLevel(logging.INFO)
-fh = logging.FileHandler("ingest_logs/990_errors.log")
-fh.setLevel(logging.ERROR)
-formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-fh.setFormatter(formatter)
-logger.addHandler(fh)
+logger = get_logger("irs_990_errors.log")
 
 YEARS = list(range(2012, 2025))  # 2012-2024
 
@@ -28,7 +21,8 @@ def download_and_extract_990(year: int) -> pd.DataFrame:
     for url in urls:
         try:
             r = requests.get(url, timeout=30)
-            r.raise_for_status()  # <-- This ensures 404 or 500 triggers an exception
+            # This ensures 404 or 500 triggers an exception
+            r.raise_for_status()  
             z = zipfile.ZipFile(io.BytesIO(r.content))
             print(f"{year}: Found files in ZIP -> {z.namelist()}")
 
