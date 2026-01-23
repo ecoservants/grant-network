@@ -2,8 +2,12 @@ import requests
 import json
 import logging
 import os
+from jsonschema import validate, ValidationError
+
 
 BASE_URL = "https://api.grants.gov/v1/api/search2"
+with open("../../../docs/schema/grants_gov_schema.json") as f:
+    GRANT_SCHEMA = json.load(f)
 
 def fetch_all_grants(rows_per_call=50):
     """
@@ -158,8 +162,9 @@ def save_normalized(data, folder = "../../../datasets/grants_gov/normalized"):
     print(f"Saved normalized data to {file_path}")
 
 
-# Add basic validation and error logging.
-def validate_grant(grant, folder = "../../../logs"):
+# validation and error logging.
+
+def validate_grant(grant, folder="../../../logs"):
     """
     Validate a single normalized grant record and log any missing required fields.
 
@@ -173,29 +178,51 @@ def validate_grant(grant, folder = "../../../logs"):
 
     Notes:
         - Required fields include:
-            id, number, title, agency_code, agency, open_date, close_date,
+            id, number, title, agency_code, agency, open_date,
             opportunity_status, document_type, cfda_list
+        - optional: close_date
         - Creates the log directory if it does not exist.
         - Logs warnings to 'grants_ingest.log' for any missing fields.
         - Does not raise exceptions; simply returns False if validation fails.
     """
     os.makedirs(folder, exist_ok=True)
-    file_path = os.path.join(folder, f"grants_ingest.log")
+    file_path = os.path.join(folder, "grants_ingest.log")
 
     logging.basicConfig(
-        filename= file_path,
+        filename=file_path,
         level=logging.INFO,
         format="%(asctime)s %(levelname)s %(message)s"
     )
 
-    missing = []
-    required_fields = ["id", "number", "title", "agency_code", "agency", "open_date", "close_date", "opportunity_status", "document_type", "cfda_list"]
-    for field in required_fields:
-        if not grant.get(field):
-            missing.append(field)
+    # -------------------------
+    # Schema validation
+    # -------------------------
+    try:
+        validate(instance=grant, schema=GRANT_SCHEMA)
+    except ValidationError as e:
+        logging.error(
+            f"Schema validation failed for grant {grant.get('id')}: {e.message}"
+        )
+        return False
+
+    # -------------------------
+    # Business validation
+    # -------------------------
+    required_fields = [
+        "id", "number", "title", "agency_code", "agency",
+        "open_date", "opportunity_status",
+        "document_type", "cfda_list"
+    ]
+
+    missing = [f for f in required_fields if not grant.get(f)]
+
     if missing:
-        logging.warning(f"Missing required fields {missing} in grant {grant.get('id')}")
-    return not missing
+        logging.warning(
+            f"Missing required fields {missing} in grant {grant.get('id')}"
+        )
+        return False
+
+    return True
 
 def main():
     raw_data = fetch_all_grants()
@@ -206,6 +233,11 @@ def main():
         validate_grant(opp)
 
     save_normalized(normalized)
+
+    # proof for 30 sample records
+    sample_records = normalized[:30]  # records 30 to 59
+    valid_count = sum(validate_grant(r) for r in sample_records)
+    print(f"{valid_count} out of {len(sample_records)} records passed schema validation")
 
 if __name__ == "__main__":
     main()

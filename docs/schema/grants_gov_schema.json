@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Grants.gov Normalized Schema",
+  "type": "object",
+  "properties": {
+    "id": {"type": "string"},
+    "number": {"type": "string"},
+    "title": {"type": "string"},
+    "agency_code": {"type": "string"},
+    "agency": {"type": "string"},
+    "open_date": {"type": "string", "format": "date-time"},
+    "close_date": {"type": "string", "format": "date-time"},
+    "opportunity_status": {"type": "string"},
+    "document_type": {"type": "string"},
+    "cfda_list": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  },
+  "required": ["id", "number", "title", "agency_code", "agency", "open_date", "close_date", "opportunity_status", "document_type", "cfda_list"]
+}
