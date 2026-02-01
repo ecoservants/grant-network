@@ -1,0 +1,12 @@
+Raw API Field   Normalized Field	Type	  	          Notes
+id              id	                string	              Unique grant ID
+number          number	            string	              Opportunity number
+title           title	            string	              Grant title
+agencyCode      agency_code	        string		          Short code for agency
+agency          agency	            string		          Agency name
+openDate        open_date	        string/date		      US format MM/DD/YYYY
+closeDate       close_date	        string/date		      US format MM/DD/YYYY (not always available)
+oppStatus       opportunity_status	string		          e.g., posted, forecasted
+docType         document_type	    string		          e.g., synopsis, forecast
+cfdaList        cfda_list	        list	              Each program in the CFDA has a unique number
+
